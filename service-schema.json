@@ -2704,14 +2704,23 @@
 				{
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/string"
+						"$ref": "#/definitions/stringOrCondition"
 					}
 				}
 			]
 		},
 		"referenceName": {
-			"type": "string",
-			"pattern": "^[_A-Za-z0-9]*$"
+			"oneOf": [
+				{
+					"type": "string",
+					"pattern": "^[_A-Za-z0-9]*$"
+				},
+				{
+					"type": "string",
+					"ignoreCase": "value",
+					"pattern": "^\\${{\\s*parameters(\\.[_A-Za-z][_A-Za-z0-9]*|\\[('[^']+'|\"[^\"]+\")\\])\\s*}}$"
+				}
+			]
 		},
 		"boolean": {
 			"anyOf": [
@@ -2811,6 +2820,28 @@
 			"type": "string",
 			"pattern": "^(and|coalesce|contains|endsWith|eq|format|gt|ge|lt|le|in|not|ne|notIn|or|startsWith|xor)\\([a-z0-9\\, \\(\\)'\"\\[\\]\\.]*\\)$",
 			"ignoreCase": "value"
+		},
+		"stringOrCondition": {
+			"oneOf": [
+				{
+					"$ref": "#/definitions/string"
+				},
+				{
+					"type": "object",
+					"additionalProperties": false,
+					"minProperties": 1,
+					"maxProperties": 1,
+					"patternProperties": {
+						"^\\${{\\s*if\\s+\\S.+}}$": {
+							"ignoreCase": "key",
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/stringOrCondition"
+							}
+						}
+					}
+				}
+			]
 		},
 		"string_allowExpressions": {
 			"type": "string"
