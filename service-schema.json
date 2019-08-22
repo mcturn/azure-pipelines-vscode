@@ -1370,81 +1370,91 @@
 					"patternProperties": {
 						"^\\${{\\s*each\\s+\\S.+}}$": {
 							"ignoreCase": "key",
-							"type": "array",
-							"minItems": 1,
-							"maxItems": 1,
-							"items": {
-								"oneOf": [
-									{
-										"type": "string",
-										"ignoreCase": "value",
-										"pattern": "^\\${{.*}}$"
-									},
-									{
-										"type": "object",
-										"additionalProperties": false,
-										"minProperties": 1,
-										"patternProperties": {
-											"^\\${{\\s*each\\s+\\S.+}}$": {
-												"ignoreCase": "key",
-												"$ref": "#/definitions/mapping"
-											}
-										},
-										"properties": {
-											"displayName": {
-												"description": "Human-readable name for the job",
-												"$ref": "#/definitions/string"
-											},
-											"dependsOn": {
-												"description": "Any jobs which must complete before this one",
-												"$ref": "#/definitions/jobDependsOn"
-											},
-											"condition": {
-												"description": "Evaluate this condition expression to determine whether to run this job",
-												"$ref": "#/definitions/string"
-											},
-											"continueOnError": {
-												"description": "Continue running even on failure?",
-												"$ref": "#/definitions/jobContinueOnError"
-											},
-											"timeoutInMinutes": {
-												"description": "Time to wait for this job to complete before the server kills it",
-												"$ref": "#/definitions/nonEmptyString"
-											},
-											"cancelTimeoutInMinutes": {
-												"description": "Time to wait for the job to cancel before forcibly terminating it",
-												"$ref": "#/definitions/nonEmptyString"
-											},
-											"variables": {
-												"description": "Job-specific variables",
-												"$ref": "#/definitions/variables"
-											},
-											"strategy": {
-												"description": "Execution strategy for this job",
-												"$ref": "#/definitions/jobStrategy"
-											},
-											"pool": {
-												"description": "Pool where this job will run",
-												"$ref": "#/definitions/pool"
-											},
-											"container": {
-												"description": "Container resource name",
-												"$ref": "#/definitions/jobContainer"
-											},
-											"services": {
-												"$ref": "#/definitions/jobServices"
-											},
-											"workspace": {
-												"$ref": "#/definitions/jobWorkspace"
-											},
-											"steps": {
-												"description": "A list of steps to run",
-												"$ref": "#/definitions/steps"
-											}
-										}
+							"anyOf": [
+								{
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/job"
 									}
-								]
-							}
+								},
+								{
+									"type": "array",
+									"minItems": 1,
+									"maxItems": 1,
+									"items": {
+										"oneOf": [
+											{
+												"type": "string",
+												"ignoreCase": "value",
+												"pattern": "^\\${{\\s*[_A-Za-z][_A-Za-z0-9]*\\s*}}$"
+											},
+											{
+												"type": "object",
+												"additionalProperties": false,
+												"minProperties": 1,
+												"patternProperties": {
+													"^\\${{\\s*each\\s+\\S.+}}$": {
+														"ignoreCase": "key",
+														"$ref": "#/definitions/mapping"
+													}
+												},
+												"properties": {
+													"displayName": {
+														"description": "Human-readable name for the job",
+														"$ref": "#/definitions/string"
+													},
+													"dependsOn": {
+														"description": "Any jobs which must complete before this one",
+														"$ref": "#/definitions/jobDependsOn"
+													},
+													"condition": {
+														"description": "Evaluate this condition expression to determine whether to run this job",
+														"$ref": "#/definitions/string"
+													},
+													"continueOnError": {
+														"description": "Continue running even on failure?",
+														"$ref": "#/definitions/jobContinueOnError"
+													},
+													"timeoutInMinutes": {
+														"description": "Time to wait for this job to complete before the server kills it",
+														"$ref": "#/definitions/nonEmptyString"
+													},
+													"cancelTimeoutInMinutes": {
+														"description": "Time to wait for the job to cancel before forcibly terminating it",
+														"$ref": "#/definitions/nonEmptyString"
+													},
+													"variables": {
+														"description": "Job-specific variables",
+														"$ref": "#/definitions/variables"
+													},
+													"strategy": {
+														"description": "Execution strategy for this job",
+														"$ref": "#/definitions/jobStrategy"
+													},
+													"pool": {
+														"description": "Pool where this job will run",
+														"$ref": "#/definitions/pool"
+													},
+													"container": {
+														"description": "Container resource name",
+														"$ref": "#/definitions/jobContainer"
+													},
+													"services": {
+														"$ref": "#/definitions/jobServices"
+													},
+													"workspace": {
+														"$ref": "#/definitions/jobWorkspace"
+													},
+													"steps": {
+														"description": "A list of steps to run",
+														"$ref": "#/definitions/steps"
+													}
+												}
+											}
+										]
+									}
+								}
+							]
 						}
 					}
 				}
@@ -2565,59 +2575,69 @@
 					"patternProperties": {
 						"^\\${{\\s*each\\s+\\S.+}}$": {
 							"ignoreCase": "key",
-							"type": "array",
-							"minItems": 1,
-							"maxItems": 1,
-							"items": {
-								"oneOf": [
-									{
-										"type": "string",
-										"ignoreCase": "value",
-										"pattern": "^\\${{.*}}$"
-									},
-									{
-										"type": "object",
-										"additionalProperties": true,
-										"minProperties": 1,
-										"patternProperties": {
-											"^\\${{\\s*each\\s+\\S.+}}$": {
-												"ignoreCase": "key",
-												"$ref": "#/definitions/mapping"
-											}
-										},
-										"properties": {
-											"condition": {
-												"description": "Evaluate this condition expression to determine whether to run this task",
-												"$ref": "#/definitions/string"
-											},
-											"continueOnError": {
-												"description": "Continue running even on failure?",
-												"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
-											},
-											"displayName": {
-												"description": "Human-readable name for the task",
-												"$ref": "#/definitions/string"
-											},
-											"enabled": {
-												"description": "Run this task when the job runs?",
-												"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
-											},
-											"env": {
-												"description": "Variables to map into the process's environment",
-												"$ref": "#/definitions/mappingOfStringString"
-											},
-											"name": {
-												"description": "ID of the step",
-												"$ref": "#/definitions/referenceName"
-											},
-											"timeoutInMinutes": {
-												"description": "Time to wait for this task to complete before the server kills it",
-												"$ref": "#/definitions/nonEmptyString"
-											}
-										}
+							"anyOf": [
+								{
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/step"
 									}
-								]
-							}
+								},
+								{
+									"type": "array",
+									"minItems": 1,
+									"maxItems": 1,
+									"items": {
+										"oneOf": [
+											{
+												"type": "string",
+												"ignoreCase": "value",
+												"pattern": "^\\${{\\s*[_A-Za-z][_A-Za-z0-9]*\\s*}}$"
+											},
+											{
+												"type": "object",
+												"additionalProperties": true,
+												"minProperties": 1,
+												"patternProperties": {
+													"^\\${{\\s*each\\s+\\S.+}}$": {
+														"ignoreCase": "key",
+														"$ref": "#/definitions/mapping"
+													}
+												},
+												"properties": {
+													"condition": {
+														"description": "Evaluate this condition expression to determine whether to run this task",
+														"$ref": "#/definitions/string"
+													},
+													"continueOnError": {
+														"description": "Continue running even on failure?",
+														"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
+													},
+													"displayName": {
+														"description": "Human-readable name for the task",
+														"$ref": "#/definitions/string"
+													},
+													"enabled": {
+														"description": "Run this task when the job runs?",
+														"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
+													},
+													"env": {
+														"description": "Variables to map into the process's environment",
+														"$ref": "#/definitions/mappingOfStringString"
+													},
+													"name": {
+														"description": "ID of the step",
+														"$ref": "#/definitions/referenceName"
+													},
+													"timeoutInMinutes": {
+														"description": "Time to wait for this task to complete before the server kills it",
+														"$ref": "#/definitions/nonEmptyString"
+													}
+												}
+											}
+										]
+									}
+								}
+							]
 						}
 					}
 				}
