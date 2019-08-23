@@ -1346,9 +1346,67 @@
 		},
 		"pool": {
 			"description": "Pool details",
-			"anyOf": [
+			"oneOf": [
 				{
 					"type": "string"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"vmImage": {
+							"description": "Name of the VM Image you want to use, only valid in the Microsoft-hosted pool",
+							"$comment": "https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops#use-a-microsoft-hosted-agent",
+							"ignoreCase": "all",
+							"oneOf": [
+								{
+									"description": "Windows Server 2019 with Visual Studio 2019",
+									"enum": [
+										"windows-latest",
+										"windows-2019"
+									]
+								},
+								{
+									"description": "Windows Server 2016 with Visual Studio 2017",
+									"enum": [
+										"vs2017-win2016"
+									]
+								},
+								{
+									"description": "Windows Server 2012 R2 with Visual Studio 2015",
+									"enum": [
+										"vs2015-win2012r2"
+									]
+								},
+								{
+									"description": "Windows Server Core 1803 (for running Windows containers)",
+									"enum": [
+										"win1803"
+									]
+								},
+								{
+									"description": "Ubuntu 16.04",
+									"enum": [
+										"ubuntu-latest",
+										"ubuntu-16.04"
+									]
+								},
+								{
+									"description": "macOS X Mojave 10.14",
+									"enum": [
+										"macOS-latest",
+										"macOS-10.14"
+									]
+								},
+								{
+									"description": "macOS X High Sierra 10.13",
+									"enum": ["macOS-10.13"]
+								}
+							]
+						}
+					},
+					"required": [
+						"vmImage"
+					]
 				},
 				{
 					"type": "object",
@@ -1362,6 +1420,9 @@
 							"$ref": "#/definitions/poolDemands"
 						}
 					},
+					"firstProperty": [
+						"name"
+					],
 					"additionalProperties": true
 				}
 			]
