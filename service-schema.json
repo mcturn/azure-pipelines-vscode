@@ -1166,6 +1166,92 @@
 					"firstProperty": [
 						"template"
 					]
+				},
+				{
+					"type": "string",
+					"description": "Insert one or more stages from parameters",
+					"ignoreCase": "value",
+					"pattern": "^\\${{\\s*parameters(\\.[_A-Za-z][_A-Za-z0-9]*|\\[('[^']+'|\"[^\"]+\")\\])\\s*}}$"
+				},
+				{
+					"type": "object",
+					"description": "Conditionally insert one or more stages",
+					"additionalProperties": false,
+					"minProperties": 1,
+					"maxProperties": 1,
+					"patternProperties": {
+						"^\\${{\\s*if\\s+\\S.+}}$": {
+							"ignoreCase": "key",
+							"$ref": "#/definitions/stages"
+						}
+					}
+				},
+				{
+					"type": "object",
+					"description": "Iteratively insert one or more stages",
+					"additionalProperties": false,
+					"minProperties": 1,
+					"maxProperties": 1,
+					"patternProperties": {
+						"^\\${{\\s*each\\s+\\S.+}}$": {
+							"ignoreCase": "key",
+							"anyOf": [
+								{
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/step"
+									}
+								},
+								{
+									"type": "array",
+									"minItems": 1,
+									"maxItems": 1,
+									"items": {
+										"oneOf": [
+											{
+												"type": "string",
+												"ignoreCase": "value",
+												"pattern": "^\\${{\\s*[_A-Za-z][_A-Za-z0-9]*\\s*}}$"
+											},
+											{
+												"type": "object",
+												"additionalProperties": false,
+												"minProperties": 1,
+												"patternProperties": {
+													"^\\${{\\s*each\\s+\\S.+}}$": {
+														"ignoreCase": "key",
+														"$ref": "#/definitions/mapping"
+													}
+												},
+												"properties": {
+													"displayName": {
+														"description": "Human-readable name for the stage",
+														"$ref": "#/definitions/string"
+													},
+													"dependsOn": {
+														"description": "Any stages which must complete before this one",
+														"$ref": "#/definitions/jobDependsOn"
+													},
+													"condition": {
+														"description": "Evaluate this condition expression to determine whether to run this stage",
+														"$ref": "#/definitions/string"
+													},
+													"variables": {
+														"description": "Stage-specific variables",
+														"$ref": "#/definitions/variables"
+													},
+													"jobs": {
+														"description": "Jobs which make up the stage",
+														"$ref": "#/definitions/jobs"
+													}
+												}
+											}
+										]
+									}
+								}
+							]
+						}
+					}
 				}
 			]
 		},
