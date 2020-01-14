@@ -2029,7 +2029,7 @@
 				{
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/nonEmptyString"
+						"$ref": "#/definitions/nonEmptyStringOrCondition"
 					}
 				}
 			]
@@ -2598,7 +2598,7 @@
 				{
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/nonEmptyString"
+						"$ref": "#/definitions/nonEmptyStringOrCondition"
 					}
 				}
 			]
@@ -3531,6 +3531,9 @@
 		},
 		"nonEmptyString": {
 			"type": "string"
+		},
+		"nonEmptyStringOrCondition": {
+			"$ref": "#/definitions/stringOrCondition"
 		},
 		"sequenceOfNonEmptyString": {
 			"type": "array",
