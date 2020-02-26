@@ -865,7 +865,7 @@
 					"properties": {
 						"autoCancel": {
 							"description": "Whether to cancel running PR builds when a new commit lands in the branch",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"branches": {
 							"$ref": "#/definitions/includeExcludeFilters"
@@ -895,7 +895,7 @@
 					"properties": {
 						"batch": {
 							"description": "Whether to batch changes per branch",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"branches": {
 							"$ref": "#/definitions/includeExcludeFilters"
@@ -1138,10 +1138,10 @@
 					"$ref": "#/definitions/includeExcludeFilters"
 				},
 				"batch": {
-					"$ref": "#/definitions/boolean"
+					"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 				},
 				"always": {
-					"$ref": "#/definitions/boolean"
+					"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 				}
 			},
 			"additionalProperties": false,
@@ -1281,7 +1281,7 @@
 					"type": "object",
 					"properties": {
 						"enabled": {
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"tags": {
 							"$ref": "#/definitions/includeExcludeStringFilters"
@@ -1345,7 +1345,7 @@
 					"type": "object",
 					"properties": {
 						"enabled": {
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"branches": {
 							"$ref": "#/definitions/triggerBranchFilter"
@@ -1969,11 +1969,11 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this job to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						},
 						"cancelTimeoutInMinutes": {
 							"description": "Time to wait for the job to cancel before forcibly terminating it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						},
 						"variables": {
 							"description": "Job-specific variables",
@@ -2031,11 +2031,11 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this job to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						},
 						"cancelTimeoutInMinutes": {
 							"description": "Time to wait for the job to cancel before forcibly terminating it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						},
 						"variables": {
 							"description": "Deployment-specific variables",
@@ -2822,7 +2822,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait before cancelling the phase",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						},
 						"workspace": {
 							"$ref": "#/definitions/phaseTargetWorkspace"
@@ -2853,7 +2853,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait before cancelling the job",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false
@@ -2953,7 +2953,7 @@
 						},
 						"continueOnError": {
 							"description": "Continue running even on failure?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"displayName": {
 							"description": "Human-readable name for the task",
@@ -2965,7 +2965,7 @@
 						},
 						"enabled": {
 							"description": "Run this task when the job runs?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"env": {
 							"description": "Variables to map into the process's environment",
@@ -2977,7 +2977,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3016,7 +3016,7 @@
 						},
 						"continueOnError": {
 							"description": "Continue running even on failure?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"displayName": {
 							"description": "Human-readable name for the task",
@@ -3028,7 +3028,7 @@
 						},
 						"enabled": {
 							"description": "Run this task when the job runs?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"env": {
 							"description": "Variables to map into the process's environment",
@@ -3040,7 +3040,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3079,7 +3079,7 @@
 						},
 						"continueOnError": {
 							"description": "Continue running even on failure?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"displayName": {
 							"description": "Human-readable name for the task",
@@ -3091,7 +3091,7 @@
 						},
 						"enabled": {
 							"description": "Run this task when the job runs?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"env": {
 							"description": "Variables to map into the process's environment",
@@ -3103,7 +3103,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3135,7 +3135,7 @@
 						},
 						"continueOnError": {
 							"description": "Continue running even on failure?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"displayName": {
 							"description": "Human-readable name for the task",
@@ -3147,7 +3147,7 @@
 						},
 						"enabled": {
 							"description": "Run this task when the job runs?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"env": {
 							"description": "Variables to map into the process's environment",
@@ -3159,7 +3159,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3211,7 +3211,7 @@
 						},
 						"continueOnError": {
 							"description": "Continue running even on failure?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"displayName": {
 							"description": "Human-readable name for the task",
@@ -3223,7 +3223,7 @@
 						},
 						"enabled": {
 							"description": "Run this task when the job runs?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"env": {
 							"description": "Variables to map into the process's environment",
@@ -3235,7 +3235,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3264,7 +3264,7 @@
 						},
 						"continueOnError": {
 							"description": "Continue running even on failure?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"displayName": {
 							"description": "Human-readable name for the task",
@@ -3276,7 +3276,7 @@
 						},
 						"enabled": {
 							"description": "Run this task when the job runs?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"env": {
 							"description": "Variables to map into the process's environment",
@@ -3288,7 +3288,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3324,7 +3324,7 @@
 						},
 						"continueOnError": {
 							"description": "Continue running even on failure?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"displayName": {
 							"description": "Human-readable name for the task",
@@ -3336,7 +3336,7 @@
 						},
 						"enabled": {
 							"description": "Run this task when the job runs?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"env": {
 							"description": "Variables to map into the process's environment",
@@ -3348,7 +3348,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3373,7 +3373,7 @@
 						},
 						"continueOnError": {
 							"description": "Continue running even on failure?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"displayName": {
 							"description": "Human-readable name for the task",
@@ -3385,7 +3385,7 @@
 						},
 						"enabled": {
 							"description": "Run this task when the job runs?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"env": {
 							"description": "Variables to map into the process's environment",
@@ -3397,7 +3397,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3420,7 +3420,7 @@
 						},
 						"continueOnError": {
 							"description": "Continue running even on failure?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"displayName": {
 							"description": "Human-readable name for the task",
@@ -3432,7 +3432,7 @@
 						},
 						"enabled": {
 							"description": "Run this task when the job runs?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"env": {
 							"description": "Variables to map into the process's environment",
@@ -3444,7 +3444,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3486,7 +3486,7 @@
 						},
 						"continueOnError": {
 							"description": "Continue running even on failure?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"displayName": {
 							"description": "Human-readable name for the task",
@@ -3498,7 +3498,7 @@
 						},
 						"enabled": {
 							"description": "Run this task when the job runs?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"env": {
 							"description": "Variables to map into the process's environment",
@@ -3510,7 +3510,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3539,7 +3539,7 @@
 						},
 						"continueOnError": {
 							"description": "Continue running even on failure?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"displayName": {
 							"description": "Human-readable name for the task",
@@ -3551,7 +3551,7 @@
 						},
 						"enabled": {
 							"description": "Run this task when the job runs?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"env": {
 							"description": "Variables to map into the process's environment",
@@ -3563,7 +3563,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3587,7 +3587,7 @@
 						},
 						"continueOnError": {
 							"description": "Continue running even on failure?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"displayName": {
 							"description": "Human-readable name for the task",
@@ -3599,7 +3599,7 @@
 						},
 						"enabled": {
 							"description": "Run this task when the job runs?",
-							"$ref": "#/definitions/boolean"
+							"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 						},
 						"env": {
 							"description": "Variables to map into the process's environment",
@@ -3611,7 +3611,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3776,7 +3776,7 @@
 				},
 				"continueOnError": {
 					"description": "Continue running even on failure?",
-					"$ref": "#/definitions/boolean"
+					"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 				},
 				"displayName": {
 					"description": "Human-readable name for the task",
@@ -3788,7 +3788,7 @@
 				},
 				"enabled": {
 					"description": "Run this task when the job runs?",
-					"$ref": "#/definitions/boolean"
+					"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 				},
 				"env": {
 					"description": "Variables to map into the process's environment",
@@ -3800,7 +3800,7 @@
 				},
 				"timeoutInMinutes": {
 					"description": "Time to wait for this task to complete before the server kills it",
-					"$ref": "#/definitions/nonEmptyString"
+					"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 				}
 			},
 			"additionalProperties": false
@@ -3868,6 +3868,61 @@
 					"pattern": "^off$"
 				}
 			]
+		},
+		"booleanTemplateMacroRuntimeExpression": {
+			"oneOf": [
+				{
+					"$ref": "#/definitions/boolean"
+				},
+				{
+					"$ref": "#/definitions/runtimeExpression"
+				},
+				{
+					"$ref": "#/definitions/macroExpression"
+				},
+				{
+					"$ref": "#/definitions/templateExpression"
+				},
+				{
+					"$ref": "#/definitions/functionExpression"
+				}
+			]
+		},
+		"integerTemplateMacroRuntimeExpression": {
+			"oneOf": [
+				{
+					"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
+				},
+				{
+					"$ref": "#/definitions/runtimeExpression"
+				},
+				{
+					"$ref": "#/definitions/macroExpression"
+				},
+				{
+					"$ref": "#/definitions/templateExpression"
+				},
+				{
+					"$ref": "#/definitions/functionExpression"
+				}
+			]
+		},
+		"macroExpression": {
+			"type": "string",
+			"pattern": "^\\$\\(.*\\)$"
+		},
+		"runtimeExpression": {
+			"type": "string",
+			"pattern": "^\\$\\[.*\\]$"
+		},
+		"templateExpression": {
+			"type": "string",
+			"pattern": "^\\${{.*}}$"
+		},
+		"functionExpression": {
+			"type": "string",
+			"pattern": "^(and|coalesce|contains|endsWith|eq|format|gt|ge|lt|le|in|not|ne|notIn|or|startsWith|xor)\\([a-z0-9\\, \\(\\)'\"\\[\\]\\.]*\\)$",
+			"ignoreCase": "value"
 		},
 		"string_allowExpressions": {
 			"type": "string"
@@ -5498,15 +5553,15 @@
 					"description": "Evaluate this condition expression to determine whether to run this task"
 				},
 				"continueOnError": {
-					"type": "boolean",
+					"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 					"description": "Continue running the parent job even on failure?"
 				},
 				"enabled": {
-					"type": "string",
+					"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 					"description": "Run this task when the job runs?"
 				},
 				"timeoutInMinutes": {
-					"type": "integer",
+					"$ref": "#/definitions/integerTemplateMacroRuntimeExpression",
 					"description": "Time to wait for this task to complete before the server kills it"
 				},
 				"inputs": {
@@ -5566,17 +5621,17 @@
 									]
 								},
 								"failOnStderr": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								},
 								"ignoreLASTEXITCODE": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Ignore $LASTEXITCODE",
 									"ignoreCase": "key"
 								},
 								"pwsh": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use PowerShell Core",
 									"ignoreCase": "key"
 								},
@@ -5636,7 +5691,7 @@
 									"ignoreCase": "key"
 								},
 								"failOnStandardError": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								}
@@ -5813,7 +5868,7 @@
 									]
 								},
 								"FailOnStandardError": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								},
@@ -5899,7 +5954,7 @@
 									]
 								},
 								"FailOnStandardError": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								},
@@ -5923,7 +5978,7 @@
 									]
 								},
 								"pwsh": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use PowerShell Core",
 									"ignoreCase": "key"
 								},
@@ -5998,7 +6053,7 @@
 									]
 								},
 								"FailOnStandardError": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								},
@@ -6022,7 +6077,7 @@
 									]
 								},
 								"pwsh": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use PowerShell Core",
 									"ignoreCase": "key"
 								},
@@ -6243,7 +6298,7 @@
 									]
 								},
 								"onlyAddExtraIndex": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Don't set primary index URL",
 									"ignoreCase": "key"
 								}
@@ -6288,7 +6343,7 @@
 									"ignoreCase": "key"
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish to TFS/Team Services",
 									"ignoreCase": "key"
 								},
@@ -6339,7 +6394,7 @@
 									]
 								},
 								"codeCoverageFailIfEmpty": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail When Code Coverage Results Are Missing",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6410,7 +6465,7 @@
 									]
 								},
 								"mavenSetM2Home": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Set M2_HOME variable",
 									"ignoreCase": "key"
 								},
@@ -6423,7 +6478,7 @@
 									]
 								},
 								"mavenAuthenticateFeed": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Authenticate built-in Maven feeds",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6431,7 +6486,7 @@
 									]
 								},
 								"sonarQubeRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run SonarQube Analysis",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6471,7 +6526,7 @@
 									]
 								},
 								"sonarQubeSpecifyDB": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "The SonarQube server version is lower than 5.2",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6503,7 +6558,7 @@
 									]
 								},
 								"sonarQubeIncludeFullReport": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include full analysis report in the build summary (SQ 5.3+)",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6511,7 +6566,7 @@
 									]
 								},
 								"sonarQubeFailWhenQualityGateFails": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail the build on quality gate failure (SQ 5.3+)",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6519,7 +6574,7 @@
 									]
 								},
 								"checkStyleRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run Checkstyle",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6527,7 +6582,7 @@
 									]
 								},
 								"pmdRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run PMD",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6535,7 +6590,7 @@
 									]
 								},
 								"findBugsRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run FindBugs",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6583,7 +6638,7 @@
 									"ignoreCase": "key"
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish to Azure Pipelines",
 									"ignoreCase": "key"
 								},
@@ -6634,7 +6689,7 @@
 									]
 								},
 								"codeCoverageFailIfEmpty": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail when code coverage results are missing",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6707,7 +6762,7 @@
 									]
 								},
 								"mavenSetM2Home": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Set M2_HOME variable",
 									"ignoreCase": "key"
 								},
@@ -6720,7 +6775,7 @@
 									]
 								},
 								"mavenAuthenticateFeed": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Authenticate built-in Maven feeds",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6728,7 +6783,7 @@
 									]
 								},
 								"sonarQubeRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run SonarQube or SonarCloud analysis",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6744,7 +6799,7 @@
 									]
 								},
 								"checkStyleRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run Checkstyle",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6752,7 +6807,7 @@
 									]
 								},
 								"pmdRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run PMD",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6760,7 +6815,7 @@
 									]
 								},
 								"findBugsRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run FindBugs",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6808,7 +6863,7 @@
 									"ignoreCase": "key"
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish to Azure Pipelines",
 									"ignoreCase": "key"
 								},
@@ -6859,7 +6914,7 @@
 									]
 								},
 								"codeCoverageFailIfEmpty": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail when code coverage results are missing",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6932,7 +6987,7 @@
 									]
 								},
 								"mavenSetM2Home": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Set M2_HOME variable",
 									"ignoreCase": "key"
 								},
@@ -6945,7 +7000,7 @@
 									]
 								},
 								"mavenAuthenticateFeed": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Authenticate built-in Maven feeds",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6953,7 +7008,7 @@
 									]
 								},
 								"effectivePomSkip": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Skip generating effective POM while authenticating built-in feeds",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6961,7 +7016,7 @@
 									]
 								},
 								"sonarQubeRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run SonarQube or SonarCloud analysis",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6977,7 +7032,7 @@
 									]
 								},
 								"checkStyleRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run Checkstyle",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6985,7 +7040,7 @@
 									]
 								},
 								"pmdRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run PMD",
 									"ignoreCase": "key",
 									"aliases": [
@@ -6993,7 +7048,7 @@
 									]
 								},
 								"findBugsRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run FindBugs",
 									"ignoreCase": "key",
 									"aliases": [
@@ -7037,7 +7092,7 @@
 									]
 								},
 								"publishWebProjects": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish Web Projects",
 									"ignoreCase": "key"
 								},
@@ -7057,7 +7112,7 @@
 									"ignoreCase": "key"
 								},
 								"publishTestResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish test results and code coverage",
 									"ignoreCase": "key"
 								},
@@ -7067,12 +7122,12 @@
 									"ignoreCase": "key"
 								},
 								"zipAfterPublish": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Zip Published Projects",
 									"ignoreCase": "key"
 								},
 								"modifyOutputPath": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Add project name to publish path",
 									"ignoreCase": "key"
 								},
@@ -7096,7 +7151,7 @@
 									]
 								},
 								"includeNuGetOrg": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use packages from NuGet.org",
 									"ignoreCase": "key"
 								},
@@ -7114,7 +7169,7 @@
 									]
 								},
 								"noCache": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Disable local cache",
 									"ignoreCase": "key"
 								},
@@ -7163,7 +7218,7 @@
 									]
 								},
 								"publishPackageMetadata": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish pipeline metadata",
 									"ignoreCase": "key"
 								},
@@ -7200,17 +7255,17 @@
 									]
 								},
 								"nobuild": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Do not build",
 									"ignoreCase": "key"
 								},
 								"includesymbols": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include Symbols",
 									"ignoreCase": "key"
 								},
 								"includesource": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include Source",
 									"ignoreCase": "key"
 								},
@@ -7309,7 +7364,7 @@
 									]
 								},
 								"publishWebProjects": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish Web Projects",
 									"ignoreCase": "key"
 								},
@@ -7324,7 +7379,7 @@
 									"ignoreCase": "key"
 								},
 								"zipAfterPublish": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Zip Published Projects",
 									"ignoreCase": "key"
 								}
@@ -7364,7 +7419,7 @@
 									]
 								},
 								"publishWebProjects": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish Web Projects",
 									"ignoreCase": "key"
 								},
@@ -7379,7 +7434,7 @@
 									"ignoreCase": "key"
 								},
 								"zipAfterPublish": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Zip Published Projects",
 									"ignoreCase": "key"
 								}
@@ -7500,7 +7555,7 @@
 									"ignoreCase": "key"
 								},
 								"deployToSlotOrASE": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Deploy to Slot or App Service Environment",
 									"ignoreCase": "key",
 									"aliases": [
@@ -7598,7 +7653,7 @@
 									"ignoreCase": "key"
 								},
 								"enableCustomDeployment": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Select deployment method",
 									"ignoreCase": "key",
 									"aliases": [
@@ -7615,7 +7670,7 @@
 									]
 								},
 								"TakeAppOfflineFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Take App Offline",
 									"ignoreCase": "key"
 								},
@@ -7625,12 +7680,12 @@
 									"ignoreCase": "key"
 								},
 								"RemoveAdditionalFilesFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Remove additional files at destination",
 									"ignoreCase": "key"
 								},
 								"ExcludeFilesFromAppDataFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Exclude files from the App_Data folder",
 									"ignoreCase": "key"
 								},
@@ -7640,12 +7695,12 @@
 									"ignoreCase": "key"
 								},
 								"RenameFilesFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Rename locked files",
 									"ignoreCase": "key"
 								},
 								"enableXmlTransform": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "XML transformation",
 									"ignoreCase": "key",
 									"aliases": [
@@ -7653,7 +7708,7 @@
 									]
 								},
 								"enableXmlVariableSubstitution": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "XML variable substitution",
 									"ignoreCase": "key",
 									"aliases": [
@@ -7698,7 +7753,7 @@
 									"ignoreCase": "key"
 								},
 								"DeployToSlotFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Deploy to slot",
 									"ignoreCase": "key"
 								},
@@ -7728,7 +7783,7 @@
 									"ignoreCase": "key"
 								},
 								"UseWebDeploy": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish using Web Deploy",
 									"ignoreCase": "key"
 								},
@@ -7738,12 +7793,12 @@
 									"ignoreCase": "key"
 								},
 								"RemoveAdditionalFilesFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Remove Additional Files at Destination",
 									"ignoreCase": "key"
 								},
 								"ExcludeFilesFromAppDataFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Exclude Files from the App_Data Folder",
 									"ignoreCase": "key"
 								},
@@ -7753,7 +7808,7 @@
 									"ignoreCase": "key"
 								},
 								"TakeAppOfflineFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Take App Offline",
 									"ignoreCase": "key"
 								}
@@ -7811,7 +7866,7 @@
 									"ignoreCase": "key"
 								},
 								"DeployToSlotFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Deploy to slot",
 									"ignoreCase": "key"
 								},
@@ -7947,7 +8002,7 @@
 									"ignoreCase": "key"
 								},
 								"GenerateWebConfig": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Generate Web.config",
 									"ignoreCase": "key"
 								},
@@ -7967,12 +8022,12 @@
 									"ignoreCase": "key"
 								},
 								"TakeAppOfflineFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Take App Offline",
 									"ignoreCase": "key"
 								},
 								"UseWebDeploy": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish using Web Deploy",
 									"ignoreCase": "key"
 								},
@@ -7982,12 +8037,12 @@
 									"ignoreCase": "key"
 								},
 								"RemoveAdditionalFilesFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Remove additional files at destination",
 									"ignoreCase": "key"
 								},
 								"ExcludeFilesFromAppDataFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Exclude files from the App_Data folder",
 									"ignoreCase": "key"
 								},
@@ -7997,12 +8052,12 @@
 									"ignoreCase": "key"
 								},
 								"RenameFilesFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Rename locked files",
 									"ignoreCase": "key"
 								},
 								"enableXmlTransform": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "XML transformation",
 									"ignoreCase": "key",
 									"aliases": [
@@ -8010,7 +8065,7 @@
 									]
 								},
 								"enableXmlVariableSubstitution": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "XML variable substitution",
 									"ignoreCase": "key",
 									"aliases": [
@@ -8127,12 +8182,12 @@
 									]
 								},
 								"failOnStderr": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								},
 								"ignoreLASTEXITCODE": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Ignore $LASTEXITCODE",
 									"ignoreCase": "key"
 								},
@@ -8142,7 +8197,7 @@
 									"ignoreCase": "key"
 								},
 								"RunPowershellInParallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run PowerShell in Parallel",
 									"ignoreCase": "key"
 								}
@@ -8195,7 +8250,7 @@
 									]
 								},
 								"TestCertificate": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Test Certificate",
 									"ignoreCase": "key"
 								},
@@ -8220,7 +8275,7 @@
 									"ignoreCase": "key"
 								},
 								"RunPowershellInParallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run PowerShell in Parallel",
 									"ignoreCase": "key"
 								},
@@ -8287,7 +8342,7 @@
 									]
 								},
 								"TestCertificate": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Test Certificate",
 									"ignoreCase": "key"
 								},
@@ -8312,7 +8367,7 @@
 									"ignoreCase": "key"
 								},
 								"RunPowershellInParallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run PowerShell in Parallel",
 									"ignoreCase": "key"
 								},
@@ -8384,7 +8439,7 @@
 									"ignoreCase": "key"
 								},
 								"failIfCoverageEmpty": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail when code coverage results are missing",
 									"ignoreCase": "key"
 								}
@@ -8467,12 +8522,12 @@
 									"ignoreCase": "key"
 								},
 								"codeCoverageEnabled": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Code Coverage Enabled",
 									"ignoreCase": "key"
 								},
 								"customSlicingEnabled": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Distribute tests by number of machines",
 									"ignoreCase": "key"
 								},
@@ -8575,7 +8630,7 @@
 									"ignoreCase": "key"
 								},
 								"removeProfile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Remove Profile After Build",
 									"ignoreCase": "key"
 								}
@@ -8623,7 +8678,7 @@
 									"ignoreCase": "key"
 								},
 								"removeProfile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Remove profile after build",
 									"ignoreCase": "key"
 								}
@@ -8689,7 +8744,7 @@
 									]
 								},
 								"alsoPublishWheel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Also publish a wheel",
 									"ignoreCase": "key",
 									"aliases": [
@@ -8948,7 +9003,7 @@
 									"ignoreCase": "key"
 								},
 								"addPipelineData": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Add Pipeline metadata to image(s)",
 									"ignoreCase": "key"
 								}
@@ -9026,7 +9081,7 @@
 									"ignoreCase": "key"
 								},
 								"defaultContext": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use Default Build Context",
 									"ignoreCase": "key"
 								},
@@ -9046,7 +9101,7 @@
 									"ignoreCase": "key"
 								},
 								"qualifyImageName": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Qualify Image Name",
 									"ignoreCase": "key"
 								},
@@ -9056,12 +9111,12 @@
 									"ignoreCase": "key"
 								},
 								"includeSourceTags": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include Source Tags",
 									"ignoreCase": "key"
 								},
 								"includeLatestTag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include Latest Tag",
 									"ignoreCase": "key"
 								},
@@ -9106,7 +9161,7 @@
 									"ignoreCase": "key"
 								},
 								"detached": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run In Background",
 									"ignoreCase": "key"
 								},
@@ -9136,7 +9191,7 @@
 									"ignoreCase": "key"
 								},
 								"enforceDockerNamingConvention": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Force image name to follow Docker naming convention",
 									"ignoreCase": "key"
 								},
@@ -9221,12 +9276,12 @@
 									"ignoreCase": "key"
 								},
 								"pushMultipleImages": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Push multiple images",
 									"ignoreCase": "key"
 								},
 								"tagMultipleImages": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Tag multiple images",
 									"ignoreCase": "key"
 								},
@@ -9241,32 +9296,32 @@
 									"ignoreCase": "key"
 								},
 								"qualifyImageName": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Qualify image name",
 									"ignoreCase": "key"
 								},
 								"qualifySourceImageName": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Qualify source image name",
 									"ignoreCase": "key"
 								},
 								"includeSourceTags": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include source tags",
 									"ignoreCase": "key"
 								},
 								"includeLatestTag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include latest tag",
 									"ignoreCase": "key"
 								},
 								"addDefaultLabels": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Add default labels",
 									"ignoreCase": "key"
 								},
 								"useDefaultContext": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use default build context",
 									"ignoreCase": "key"
 								},
@@ -9316,7 +9371,7 @@
 									"ignoreCase": "key"
 								},
 								"runInBackground": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run in background",
 									"ignoreCase": "key"
 								},
@@ -9341,7 +9396,7 @@
 									"ignoreCase": "key"
 								},
 								"enforceDockerNamingConvention": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Force image name to follow Docker naming convention",
 									"ignoreCase": "key"
 								},
@@ -9383,7 +9438,7 @@
 									"ignoreCase": "key"
 								},
 								"isMultibranchJob": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Job is of Multibranch Pipeline type",
 									"ignoreCase": "key"
 								},
@@ -9393,17 +9448,17 @@
 									"ignoreCase": "key"
 								},
 								"captureConsole": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Capture console output and wait for completion",
 									"ignoreCase": "key"
 								},
 								"capturePipeline": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Capture pipeline output and wait for pipeline completion",
 									"ignoreCase": "key"
 								},
 								"parameterizedJob": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Parameterized job",
 									"ignoreCase": "key"
 								},
@@ -9449,7 +9504,7 @@
 									"ignoreCase": "key"
 								},
 								"isMultibranchJob": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Job is of multibranch pipeline type",
 									"ignoreCase": "key"
 								},
@@ -9459,17 +9514,17 @@
 									"ignoreCase": "key"
 								},
 								"captureConsole": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Capture console output and wait for completion",
 									"ignoreCase": "key"
 								},
 								"capturePipeline": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Capture pipeline output and wait for pipeline completion",
 									"ignoreCase": "key"
 								},
 								"isParameterizedJob": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Parameterized job",
 									"ignoreCase": "key",
 									"aliases": [
@@ -9560,27 +9615,27 @@
 									]
 								},
 								"clean": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Delete remote directory",
 									"ignoreCase": "key"
 								},
 								"cleanContents": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clear remote directory contents",
 									"ignoreCase": "key"
 								},
 								"overwrite": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Overwrite",
 									"ignoreCase": "key"
 								},
 								"preservePaths": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Preserve file paths",
 									"ignoreCase": "key"
 								},
 								"trustSSL": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Trust server certificate",
 									"ignoreCase": "key"
 								}
@@ -9662,27 +9717,27 @@
 									]
 								},
 								"enableUtf8": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable UTF8 support",
 									"ignoreCase": "key"
 								},
 								"clean": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Delete remote directory",
 									"ignoreCase": "key"
 								},
 								"cleanContents": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clear remote directory contents",
 									"ignoreCase": "key"
 								},
 								"preservePaths": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Preserve file paths",
 									"ignoreCase": "key"
 								},
 								"trustSSL": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Trust server certificate",
 									"ignoreCase": "key"
 								},
@@ -9742,12 +9797,12 @@
 									"ignoreCase": "key"
 								},
 								"CleanTargetBeforeCopy": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean Target",
 									"ignoreCase": "key"
 								},
 								"CopyFilesInParallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Copy Files in Parallel",
 									"ignoreCase": "key"
 								},
@@ -9821,12 +9876,12 @@
 									"ignoreCase": "key"
 								},
 								"CleanTargetBeforeCopy": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean Target",
 									"ignoreCase": "key"
 								},
 								"CopyFilesInParallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Copy Files in Parallel",
 									"ignoreCase": "key"
 								},
@@ -9882,7 +9937,7 @@
 									"ignoreCase": "key"
 								},
 								"createAvd": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create AVD",
 									"ignoreCase": "key"
 								},
@@ -9902,7 +9957,7 @@
 									"ignoreCase": "key"
 								},
 								"avdForce": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Overwrite Existing AVD",
 									"ignoreCase": "key"
 								},
@@ -9912,7 +9967,7 @@
 									"ignoreCase": "key"
 								},
 								"startEmulator": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Start and Stop Android Emulator",
 									"ignoreCase": "key"
 								},
@@ -9922,7 +9977,7 @@
 									"ignoreCase": "key"
 								},
 								"emulatorHeadless": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Headless Display",
 									"ignoreCase": "key"
 								},
@@ -9932,7 +9987,7 @@
 									"ignoreCase": "key"
 								},
 								"deleteAvd": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Delete AVD",
 									"ignoreCase": "key"
 								}
@@ -9977,7 +10032,7 @@
 									]
 								},
 								"publishPackageMetadata": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish pipeline metadata",
 									"ignoreCase": "key"
 								}
@@ -10062,17 +10117,17 @@
 									"ignoreCase": "key"
 								},
 								"RemoveAdditionalFilesFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Remove Additional Files at Destination",
 									"ignoreCase": "key"
 								},
 								"ExcludeFilesFromAppDataFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Exclude Files from the App_Data Folder",
 									"ignoreCase": "key"
 								},
 								"TakeAppOfflineFlag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Take App Offline",
 									"ignoreCase": "key"
 								},
@@ -10082,12 +10137,12 @@
 									"ignoreCase": "key"
 								},
 								"XmlTransformation": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "XML transformation",
 									"ignoreCase": "key"
 								},
 								"XmlVariableSubstitution": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "XML variable substitution",
 									"ignoreCase": "key"
 								},
@@ -10155,7 +10210,7 @@
 									"ignoreCase": "key"
 								},
 								"failOnStderr": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on standard error",
 									"ignoreCase": "key"
 								}
@@ -10187,12 +10242,12 @@
 									"ignoreCase": "key"
 								},
 								"checkLatestHelmVersion": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Check for latest version of Helm",
 									"ignoreCase": "key"
 								},
 								"installKubectl": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Install Kubectl",
 									"ignoreCase": "key",
 									"aliases": [
@@ -10205,7 +10260,7 @@
 									"ignoreCase": "key"
 								},
 								"checkLatestKubectl": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Check for latest version of kubectl",
 									"ignoreCase": "key",
 									"aliases": [
@@ -10327,7 +10382,7 @@
 									"ignoreCase": "key"
 								},
 								"forceReinstallCredentialProvider": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Reinstall the credential provider even if already installed",
 									"ignoreCase": "key"
 								}
@@ -10367,17 +10422,17 @@
 									"ignoreCase": "key"
 								},
 								"autoInjected": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "AutoInjected",
 									"ignoreCase": "key"
 								},
 								"whatif": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "[OBSOLETE] Whatif Mode (uncheck and use Scan Mode instead)",
 									"ignoreCase": "key"
 								},
 								"useDefaultDetectors": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use the default dependency detectors",
 									"ignoreCase": "key"
 								},
@@ -10426,7 +10481,7 @@
 									]
 								},
 								"failOnAlert": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail build on alerts above threshold",
 									"ignoreCase": "key"
 								},
@@ -10581,7 +10636,7 @@
 									"ignoreCase": "key"
 								},
 								"cleanDestinationDirectory": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean destination directory",
 									"ignoreCase": "key"
 								}
@@ -10680,7 +10735,7 @@
 									"ignoreCase": "key"
 								},
 								"deployToSlotOrASE": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Deploy to Slot or App Service Environment",
 									"ignoreCase": "key"
 								},
@@ -10849,27 +10904,27 @@
 									"ignoreCase": "key"
 								},
 								"clean": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean",
 									"ignoreCase": "key"
 								},
 								"maximumCpuCount": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Build in Parallel",
 									"ignoreCase": "key"
 								},
 								"restoreNugetPackages": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Restore NuGet Packages",
 									"ignoreCase": "key"
 								},
 								"logProjectEvents": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Record Project Details",
 									"ignoreCase": "key"
 								},
 								"createLogFile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create Log File",
 									"ignoreCase": "key"
 								},
@@ -11007,7 +11062,7 @@
 									"ignoreCase": "key"
 								},
 								"skipTempFileCleanupDuringVMDeprovision": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Skip temporary file cleanup during deprovision",
 									"ignoreCase": "key"
 								},
@@ -11070,7 +11125,7 @@
 									"ignoreCase": "key"
 								},
 								"isManagedImage": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Managed VM disk image",
 									"ignoreCase": "key"
 								},
@@ -11158,7 +11213,7 @@
 									"ignoreCase": "key"
 								},
 								"skipTempFileCleanupDuringVMDeprovision": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Skip temporary file cleanup during deprovision",
 									"ignoreCase": "key"
 								},
@@ -11218,7 +11273,7 @@
 									"ignoreCase": "key"
 								},
 								"includeReferencedProjects": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include referenced projects",
 									"ignoreCase": "key"
 								},
@@ -11315,7 +11370,7 @@
 									]
 								},
 								"updateOnlyChanged": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Update only if changed",
 									"ignoreCase": "key"
 								},
@@ -11325,7 +11380,7 @@
 									"ignoreCase": "key"
 								},
 								"logAllChanges": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Log all changes",
 									"ignoreCase": "key"
 								},
@@ -11394,7 +11449,7 @@
 									]
 								},
 								"updateOnlyChanged": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Update only if changed",
 									"ignoreCase": "key"
 								},
@@ -11404,7 +11459,7 @@
 									"ignoreCase": "key"
 								},
 								"logAllChanges": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Log all changes",
 									"ignoreCase": "key"
 								},
@@ -11422,7 +11477,7 @@
 									"ignoreCase": "key"
 								},
 								"overwriteExistingPkgArtifact": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Overwrite Existing Package Artifact",
 									"ignoreCase": "key"
 								},
@@ -11467,7 +11522,7 @@
 									"ignoreCase": "key"
 								},
 								"checkLatestVersion": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Check for latest version",
 									"ignoreCase": "key"
 								}
@@ -11841,7 +11896,7 @@
 									"ignoreCase": "key"
 								},
 								"qualifyImageNames": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Qualify Image Names",
 									"ignoreCase": "key"
 								},
@@ -11865,17 +11920,17 @@
 									"ignoreCase": "key"
 								},
 								"includeSourceTags": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include Source Tags",
 									"ignoreCase": "key"
 								},
 								"includeLatestTag": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include Latest Tag",
 									"ignoreCase": "key"
 								},
 								"buildImages": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Build Images",
 									"ignoreCase": "key"
 								},
@@ -11913,12 +11968,12 @@
 									"ignoreCase": "key"
 								},
 								"detached": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run in Background",
 									"ignoreCase": "key"
 								},
 								"abortOnContainerExit": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Abort on Container Exit",
 									"ignoreCase": "key"
 								},
@@ -11928,7 +11983,7 @@
 									"ignoreCase": "key"
 								},
 								"removeBuildOptions": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Remove Build Options",
 									"ignoreCase": "key"
 								},
@@ -11958,12 +12013,12 @@
 									"ignoreCase": "key"
 								},
 								"nopIfNoDockerComposeFile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "No-op if no Docker Compose File",
 									"ignoreCase": "key"
 								},
 								"requireAdditionalDockerComposeFiles": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Require Additional Docker Compose Files",
 									"ignoreCase": "key"
 								},
@@ -12031,7 +12086,7 @@
 									"ignoreCase": "key"
 								},
 								"NotifyServiceOwners": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Subscription owners, contributors and readers",
 									"ignoreCase": "key"
 								},
@@ -12166,7 +12221,7 @@
 									"ignoreCase": "key"
 								},
 								"publishNUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish results to Azure Pipelines",
 									"ignoreCase": "key"
 								}
@@ -12222,12 +12277,12 @@
 									"ignoreCase": "key"
 								},
 								"overrideApplicationParameter": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Override Application Parameters",
 									"ignoreCase": "key"
 								},
 								"compressPackage": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Compress Package",
 									"ignoreCase": "key"
 								},
@@ -12251,32 +12306,32 @@
 									]
 								},
 								"skipUpgradeSameTypeAndVersion": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Skip upgrade for same Type and Version",
 									"ignoreCase": "key"
 								},
 								"skipPackageValidation": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Skip package validation",
 									"ignoreCase": "key"
 								},
 								"useDiffPackage": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use Diff Package",
 									"ignoreCase": "key"
 								},
 								"overridePublishProfileSettings": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Override All Publish Profile Upgrade Settings",
 									"ignoreCase": "key"
 								},
 								"isUpgrade": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Upgrade the Application",
 									"ignoreCase": "key"
 								},
 								"unregisterUnusedVersions": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Unregister Unused Versions",
 									"ignoreCase": "key"
 								},
@@ -12308,7 +12363,7 @@
 									"ignoreCase": "key"
 								},
 								"ForceRestart": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "ForceRestart",
 									"ignoreCase": "key"
 								},
@@ -12333,7 +12388,7 @@
 									"ignoreCase": "key"
 								},
 								"ConsiderWarningAsError": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "ConsiderWarningAsError",
 									"ignoreCase": "key"
 								},
@@ -12358,7 +12413,7 @@
 									"ignoreCase": "key"
 								},
 								"configureDockerSettings": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Configure Docker settings",
 									"ignoreCase": "key"
 								},
@@ -12398,7 +12453,7 @@
 									"ignoreCase": "key"
 								},
 								"passwordEncrypted": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Password Encrypted",
 									"ignoreCase": "key"
 								}
@@ -12470,7 +12525,7 @@
 									"ignoreCase": "key"
 								},
 								"packageApp": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create app package",
 									"ignoreCase": "key"
 								},
@@ -12591,12 +12646,12 @@
 									]
 								},
 								"useXcpretty": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use xcpretty",
 									"ignoreCase": "key"
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish test results to Azure Pipelines",
 									"ignoreCase": "key"
 								}
@@ -12648,7 +12703,7 @@
 									"ignoreCase": "key"
 								},
 								"packageApp": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create App Package",
 									"ignoreCase": "key"
 								},
@@ -12692,7 +12747,7 @@
 									"ignoreCase": "key"
 								},
 								"xcode8AutomaticSigning": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Automatic Signing",
 									"ignoreCase": "key"
 								},
@@ -12715,7 +12770,7 @@
 									"ignoreCase": "key"
 								},
 								"unlockDefaultKeychain": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Unlock Default Keychain",
 									"ignoreCase": "key"
 								},
@@ -12745,7 +12800,7 @@
 									"ignoreCase": "key"
 								},
 								"removeProfile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Remove Profile After Build",
 									"ignoreCase": "key"
 								},
@@ -12770,12 +12825,12 @@
 									"ignoreCase": "key"
 								},
 								"useXcpretty": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use xcpretty",
 									"ignoreCase": "key"
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish to VSTS/TFS",
 									"ignoreCase": "key"
 								}
@@ -12842,7 +12897,7 @@
 									"ignoreCase": "key"
 								},
 								"packageApp": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create app package",
 									"ignoreCase": "key"
 								},
@@ -12963,12 +13018,12 @@
 									"ignoreCase": "key"
 								},
 								"useXcpretty": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use xcpretty",
 									"ignoreCase": "key"
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish test results to VSTS/TFS",
 									"ignoreCase": "key"
 								}
@@ -13020,7 +13075,7 @@
 									"ignoreCase": "key"
 								},
 								"packageApp": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create App Package",
 									"ignoreCase": "key"
 								},
@@ -13067,7 +13122,7 @@
 									"ignoreCase": "key"
 								},
 								"xcode8AutomaticSigning": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Automatic Signing",
 									"ignoreCase": "key"
 								},
@@ -13090,7 +13145,7 @@
 									"ignoreCase": "key"
 								},
 								"unlockDefaultKeychain": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Unlock Default Keychain",
 									"ignoreCase": "key"
 								},
@@ -13120,7 +13175,7 @@
 									"ignoreCase": "key"
 								},
 								"removeProfile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Remove Profile After Build",
 									"ignoreCase": "key"
 								},
@@ -13145,17 +13200,17 @@
 									"ignoreCase": "key"
 								},
 								"useXcpretty": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use xcpretty",
 									"ignoreCase": "key"
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish to VSTS/TFS",
 									"ignoreCase": "key"
 								},
 								"useXctool": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use xctool",
 									"ignoreCase": "key"
 								},
@@ -13240,7 +13295,7 @@
 									"ignoreCase": "key"
 								},
 								"continueOnEmptyNupkgMatch": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Continue if no packages match the \"Path/Pattern to nupkg\"",
 									"ignoreCase": "key"
 								}
@@ -13319,7 +13374,7 @@
 									"ignoreCase": "key"
 								},
 								"deployToSlotOrASE": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Deploy to Slot or App Service Environment",
 									"ignoreCase": "key"
 								},
@@ -13407,12 +13462,12 @@
 									"ignoreCase": "key"
 								},
 								"ExecuteInTransaction": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Execute within a transaction",
 									"ignoreCase": "key"
 								},
 								"ExclusiveLock": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Acquire an exclusive app lock while executing script(s)",
 									"ignoreCase": "key"
 								},
@@ -13690,7 +13745,7 @@
 									]
 								},
 								"prepareTests": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Prepare tests",
 									"ignoreCase": "key",
 									"aliases": [
@@ -13754,7 +13809,7 @@
 									"ignoreCase": "key"
 								},
 								"calabashSkipConfigCheck": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Skip Configuration Check",
 									"ignoreCase": "key"
 								},
@@ -13830,7 +13885,7 @@
 									]
 								},
 								"runTests": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run tests",
 									"ignoreCase": "key",
 									"aliases": [
@@ -13928,7 +13983,7 @@
 									]
 								},
 								"skipWaitingForResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Do not wait for test result",
 									"ignoreCase": "key",
 									"aliases": [
@@ -13944,7 +13999,7 @@
 									]
 								},
 								"showDebugOutput": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable debug output",
 									"ignoreCase": "key",
 									"aliases": [
@@ -13987,7 +14042,7 @@
 									"ignoreCase": "key"
 								},
 								"enablePrepare": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Prepare Tests",
 									"ignoreCase": "key"
 								},
@@ -14033,7 +14088,7 @@
 									"ignoreCase": "key"
 								},
 								"calabashSkipConfigCheck": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Skip Configuration Check",
 									"ignoreCase": "key"
 								},
@@ -14088,7 +14143,7 @@
 									"ignoreCase": "key"
 								},
 								"enableRun": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run Tests",
 									"ignoreCase": "key"
 								},
@@ -14168,7 +14223,7 @@
 									"ignoreCase": "key"
 								},
 								"async": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Do not wait for test result",
 									"ignoreCase": "key"
 								},
@@ -14178,7 +14233,7 @@
 									"ignoreCase": "key"
 								},
 								"debug": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable Debug Output",
 									"ignoreCase": "key"
 								}
@@ -14248,7 +14303,7 @@
 									"ignoreCase": "key"
 								},
 								"addToPath": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Add to PATH",
 									"ignoreCase": "key"
 								}
@@ -14303,7 +14358,7 @@
 									"ignoreCase": "key"
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish to Azure Pipelines",
 									"ignoreCase": "key"
 								},
@@ -14318,7 +14373,7 @@
 									"ignoreCase": "key"
 								},
 								"enableCodeCoverage": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable Code Coverage",
 									"ignoreCase": "key"
 								},
@@ -14518,7 +14573,7 @@
 									"ignoreCase": "key"
 								},
 								"DeleteFirewallRule": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Delete Rule After Task Ends",
 									"ignoreCase": "key"
 								}
@@ -14570,7 +14625,7 @@
 									"ignoreCase": "key"
 								},
 								"failTaskOnFailedTests": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail task if there are test failures",
 									"ignoreCase": "key"
 								}
@@ -14625,7 +14680,7 @@
 									]
 								},
 								"TestCertificate": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Test Certificate",
 									"ignoreCase": "key"
 								},
@@ -14645,7 +14700,7 @@
 									"ignoreCase": "key"
 								},
 								"CreateWebSite": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create or Update Website",
 									"ignoreCase": "key"
 								},
@@ -14678,12 +14733,12 @@
 									"ignoreCase": "key"
 								},
 								"AddBinding": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Add Binding",
 									"ignoreCase": "key"
 								},
 								"AssignDuplicateBinding": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Assign Duplicate Binding",
 									"ignoreCase": "key"
 								},
@@ -14706,7 +14761,7 @@
 									"ignoreCase": "key"
 								},
 								"ServerNameIndication": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Server Name Indication Required",
 									"ignoreCase": "key"
 								},
@@ -14731,7 +14786,7 @@
 									"ignoreCase": "key"
 								},
 								"CreateAppPool": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create or Update Application Pool",
 									"ignoreCase": "key"
 								},
@@ -14784,7 +14839,7 @@
 									"ignoreCase": "key"
 								},
 								"DeployInParallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Deploy in Parallel",
 									"ignoreCase": "key"
 								},
@@ -14886,7 +14941,7 @@
 									"ignoreCase": "key"
 								},
 								"numOfSelfProvisionedAgents": {
-									"type": "integer",
+									"$ref": "#/definitions/integerTemplateMacroRuntimeExpression",
 									"description": "Number of agents to use",
 									"ignoreCase": "key"
 								}
@@ -14955,7 +15010,7 @@
 									"ignoreCase": "key"
 								},
 								"failOnStderr": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								}
@@ -14997,7 +15052,7 @@
 									"ignoreCase": "key"
 								},
 								"failOnStandardError": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								}
@@ -15082,7 +15137,7 @@
 									]
 								},
 								"noCache": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Disable local cache",
 									"ignoreCase": "key"
 								},
@@ -15157,7 +15212,7 @@
 									"ignoreCase": "key"
 								},
 								"includeNuGetOrg": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use packages from NuGet.org",
 									"ignoreCase": "key"
 								},
@@ -15167,7 +15222,7 @@
 									"ignoreCase": "key"
 								},
 								"noCache": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Disable local cache",
 									"ignoreCase": "key"
 								},
@@ -15246,7 +15301,7 @@
 									]
 								},
 								"includeNuGetOrg": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use packages from NuGet.org",
 									"ignoreCase": "key"
 								},
@@ -15264,12 +15319,12 @@
 									]
 								},
 								"noCache": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Disable local cache",
 									"ignoreCase": "key"
 								},
 								"disableParallelProcessing": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Disable parallel processing",
 									"ignoreCase": "key"
 								},
@@ -15315,12 +15370,12 @@
 									]
 								},
 								"publishPackageMetadata": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish pipeline metadata",
 									"ignoreCase": "key"
 								},
 								"allowPackageConflicts": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Allow duplicates to be skipped",
 									"ignoreCase": "key"
 								},
@@ -15376,7 +15431,7 @@
 									]
 								},
 								"includeReferencedProjects": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include referenced projects",
 									"ignoreCase": "key"
 								},
@@ -15418,12 +15473,12 @@
 									]
 								},
 								"includeSymbols": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create symbols package",
 									"ignoreCase": "key"
 								},
 								"toolPackage": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Tool Package",
 									"ignoreCase": "key"
 								},
@@ -15514,17 +15569,17 @@
 									"ignoreCase": "key"
 								},
 								"clean": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean",
 									"ignoreCase": "key"
 								},
 								"packageApp": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create app package",
 									"ignoreCase": "key"
 								},
 								"buildForSimulator": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Build for iOS Simulator",
 									"ignoreCase": "key",
 									"aliases": [
@@ -15532,7 +15587,7 @@
 									]
 								},
 								"runNugetRestore": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run NuGet restore",
 									"ignoreCase": "key"
 								},
@@ -15588,7 +15643,7 @@
 									]
 								},
 								"signingUnlockDefaultKeychain": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Unlock default keychain",
 									"ignoreCase": "key",
 									"aliases": [
@@ -15636,7 +15691,7 @@
 									]
 								},
 								"signingRemoveProfile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Remove profile after build",
 									"ignoreCase": "key",
 									"aliases": [
@@ -15679,17 +15734,17 @@
 									"ignoreCase": "key"
 								},
 								"clean": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean",
 									"ignoreCase": "key"
 								},
 								"packageApp": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create app package",
 									"ignoreCase": "key"
 								},
 								"buildForSimulator": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Build for iOS Simulator",
 									"ignoreCase": "key",
 									"aliases": [
@@ -15697,7 +15752,7 @@
 									]
 								},
 								"runNugetRestore": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run NuGet restore",
 									"ignoreCase": "key"
 								},
@@ -15777,7 +15832,7 @@
 									"ignoreCase": "key"
 								},
 								"mergeTestResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Merge Test Results",
 									"ignoreCase": "key"
 								},
@@ -15797,7 +15852,7 @@
 									"ignoreCase": "key"
 								},
 								"publishRunAttachments": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Upload Test Attachments",
 									"ignoreCase": "key"
 								}
@@ -15848,12 +15903,12 @@
 									"ignoreCase": "key"
 								},
 								"mergeTestResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Merge test results",
 									"ignoreCase": "key"
 								},
 								"failTaskOnFailedTests": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail if there are test failures",
 									"ignoreCase": "key"
 								},
@@ -15879,7 +15934,7 @@
 									]
 								},
 								"publishRunAttachments": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Upload test results files",
 									"ignoreCase": "key"
 								}
@@ -15991,22 +16046,22 @@
 									"ignoreCase": "key"
 								},
 								"enableCopyPrerequisites": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable Copy Prerequisites",
 									"ignoreCase": "key"
 								},
 								"CopyFilesInParallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Copy in Parallel",
 									"ignoreCase": "key"
 								},
 								"CleanTargetBeforeCopy": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean Target",
 									"ignoreCase": "key"
 								},
 								"skipCACheck": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Test Certificate",
 									"ignoreCase": "key"
 								},
@@ -16169,22 +16224,22 @@
 									"ignoreCase": "key"
 								},
 								"enableCopyPrerequisites": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable Copy Prerequisites",
 									"ignoreCase": "key"
 								},
 								"CopyFilesInParallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Copy in Parallel",
 									"ignoreCase": "key"
 								},
 								"CleanTargetBeforeCopy": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean Target",
 									"ignoreCase": "key"
 								},
 								"skipCACheck": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Test Certificate",
 									"ignoreCase": "key"
 								},
@@ -16345,22 +16400,22 @@
 									"ignoreCase": "key"
 								},
 								"enableCopyPrerequisites": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable Copy Prerequisites",
 									"ignoreCase": "key"
 								},
 								"CopyFilesInParallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Copy in Parallel",
 									"ignoreCase": "key"
 								},
 								"CleanTargetBeforeCopy": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean Target",
 									"ignoreCase": "key"
 								},
 								"skipCACheck": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Test Certificate",
 									"ignoreCase": "key"
 								},
@@ -16416,12 +16471,12 @@
 									"ignoreCase": "key"
 								},
 								"SkipIndexing": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Skip indexing",
 									"ignoreCase": "key"
 								},
 								"TreatNotIndexedAsWarning": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Warn if not indexed",
 									"ignoreCase": "key"
 								},
@@ -16478,12 +16533,12 @@
 									"ignoreCase": "key"
 								},
 								"IndexSources": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Index sources",
 									"ignoreCase": "key"
 								},
 								"PublishSymbols": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish symbols",
 									"ignoreCase": "key"
 								},
@@ -16502,17 +16557,17 @@
 									"ignoreCase": "key"
 								},
 								"CompressSymbols": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Compress symbols",
 									"ignoreCase": "key"
 								},
 								"DetailedLog": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Verbose logging",
 									"ignoreCase": "key"
 								},
 								"TreatNotIndexedAsWarning": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Warn if not indexed",
 									"ignoreCase": "key"
 								},
@@ -16579,22 +16634,22 @@
 									"ignoreCase": "key"
 								},
 								"cleanTargetFolder": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean target folder",
 									"ignoreCase": "key"
 								},
 								"overwrite": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Overwrite",
 									"ignoreCase": "key"
 								},
 								"failOnEmptySource": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail if no files found to copy",
 									"ignoreCase": "key"
 								},
 								"flattenFolders": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Flatten folders",
 									"ignoreCase": "key"
 								}
@@ -16650,7 +16705,7 @@
 									]
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish to TFS/Team Services",
 									"ignoreCase": "key"
 								},
@@ -16693,7 +16748,7 @@
 									]
 								},
 								"codeCoverageFailIfEmpty": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail When Code Coverage Results Are Missing",
 									"ignoreCase": "key",
 									"aliases": [
@@ -16753,7 +16808,7 @@
 									]
 								},
 								"sonarQubeRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run SonarQube Analysis",
 									"ignoreCase": "key",
 									"aliases": [
@@ -16801,7 +16856,7 @@
 									]
 								},
 								"sonarQubeSpecifyDB": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "The SonarQube server version is lower than 5.2",
 									"ignoreCase": "key",
 									"aliases": [
@@ -16833,7 +16888,7 @@
 									]
 								},
 								"sonarQubeIncludeFullReport": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include full analysis report in the build summary (SQ 5.3+)",
 									"ignoreCase": "key",
 									"aliases": [
@@ -16841,7 +16896,7 @@
 									]
 								},
 								"sonarQubeFailWhenQualityGateFails": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail the build on quality gate failure (SQ 5.3+)",
 									"ignoreCase": "key",
 									"aliases": [
@@ -16849,7 +16904,7 @@
 									]
 								},
 								"checkStyleRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run Checkstyle",
 									"ignoreCase": "key",
 									"aliases": [
@@ -16857,7 +16912,7 @@
 									]
 								},
 								"findBugsRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run FindBugs",
 									"ignoreCase": "key",
 									"aliases": [
@@ -16865,7 +16920,7 @@
 									]
 								},
 								"pmdRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run PMD",
 									"ignoreCase": "key",
 									"aliases": [
@@ -16921,7 +16976,7 @@
 									"ignoreCase": "key"
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish to Azure Pipelines",
 									"ignoreCase": "key"
 								},
@@ -16964,7 +17019,7 @@
 									]
 								},
 								"codeCoverageFailIfEmpty": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail when code coverage results are missing",
 									"ignoreCase": "key",
 									"aliases": [
@@ -17026,7 +17081,7 @@
 									]
 								},
 								"sonarQubeRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run SonarQube or SonarCloud Analysis",
 									"ignoreCase": "key",
 									"aliases": [
@@ -17050,7 +17105,7 @@
 									]
 								},
 								"checkStyleRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run Checkstyle",
 									"ignoreCase": "key",
 									"aliases": [
@@ -17058,7 +17113,7 @@
 									]
 								},
 								"findBugsRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run FindBugs",
 									"ignoreCase": "key",
 									"aliases": [
@@ -17066,7 +17121,7 @@
 									]
 								},
 								"pmdRunAnalysis": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run PMD",
 									"ignoreCase": "key",
 									"aliases": [
@@ -17157,7 +17212,7 @@
 									]
 								},
 								"symbolsIncludeParentDirectory": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include all items in parent folder",
 									"ignoreCase": "key",
 									"aliases": [
@@ -17186,7 +17241,7 @@
 									"ignoreCase": "key"
 								},
 								"isMandatory": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Require users to update to this release",
 									"ignoreCase": "key"
 								},
@@ -17212,7 +17267,7 @@
 									"ignoreCase": "key"
 								},
 								"isSilent": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Do not notify testers. Release will still be available to install.",
 									"ignoreCase": "key"
 								}
@@ -17301,7 +17356,7 @@
 									]
 								},
 								"symbolsIncludeParentDirectory": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include all items in parent folder",
 									"ignoreCase": "key",
 									"aliases": [
@@ -17330,7 +17385,7 @@
 									"ignoreCase": "key"
 								},
 								"isMandatory": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Require users to update to this release",
 									"ignoreCase": "key"
 								},
@@ -17427,7 +17482,7 @@
 									]
 								},
 								"symbolsIncludeParentDirectory": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include all items in parent folder",
 									"ignoreCase": "key",
 									"aliases": [
@@ -17456,7 +17511,7 @@
 									"ignoreCase": "key"
 								},
 								"isMandatory": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Require users to update to this release",
 									"ignoreCase": "key"
 								},
@@ -17554,7 +17609,7 @@
 									]
 								},
 								"symbolsIncludeParentDirectory": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include all items in parent folder",
 									"ignoreCase": "key",
 									"aliases": [
@@ -17620,7 +17675,7 @@
 									"ignoreCase": "key"
 								},
 								"checkLatest": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Always download the latest matching version",
 									"ignoreCase": "key"
 								}
@@ -17652,7 +17707,7 @@
 									"ignoreCase": "key"
 								},
 								"checkLatest": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Always check for new versions",
 									"ignoreCase": "key"
 								}
@@ -17720,7 +17775,7 @@
 									"ignoreCase": "key"
 								},
 								"downloadCommitsAndWorkItems": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Download Commits and WorkItems",
 									"ignoreCase": "key"
 								},
@@ -17735,7 +17790,7 @@
 									"ignoreCase": "key"
 								},
 								"propagatedArtifacts": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Artifacts are propagated to Azure",
 									"ignoreCase": "key"
 								},
@@ -17803,7 +17858,7 @@
 									"ignoreCase": "key"
 								},
 								"deployToSlotOrASE": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Deploy to Slot or App Service Environment",
 									"ignoreCase": "key"
 								},
@@ -17946,7 +18001,7 @@
 									"ignoreCase": "key"
 								},
 								"useClusterAdmin": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use cluster admin credentials",
 									"ignoreCase": "key"
 								},
@@ -18028,7 +18083,7 @@
 									"ignoreCase": "key"
 								},
 								"canaryImage": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use canary image version.",
 									"ignoreCase": "key",
 									"aliases": [
@@ -18036,7 +18091,7 @@
 									]
 								},
 								"upgradeTiller": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Upgrade Tiller",
 									"ignoreCase": "key",
 									"aliases": [
@@ -18044,7 +18099,7 @@
 									]
 								},
 								"updateDependency": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Update Dependency",
 									"ignoreCase": "key",
 									"aliases": [
@@ -18052,32 +18107,32 @@
 									]
 								},
 								"save": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Save",
 									"ignoreCase": "key"
 								},
 								"install": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Install if release not present.",
 									"ignoreCase": "key"
 								},
 								"recreate": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Recreate Pods.",
 									"ignoreCase": "key"
 								},
 								"resetValues": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Reset Values.",
 									"ignoreCase": "key"
 								},
 								"force": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Force",
 									"ignoreCase": "key"
 								},
 								"waitForExecution": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Wait",
 									"ignoreCase": "key"
 								},
@@ -18087,7 +18142,7 @@
 									"ignoreCase": "key"
 								},
 								"enableTls": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable TLS",
 									"ignoreCase": "key"
 								},
@@ -18166,12 +18221,12 @@
 									"ignoreCase": "key"
 								},
 								"deleteCert": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Delete certificate from keychain",
 									"ignoreCase": "key"
 								},
 								"deleteCustomKeychain": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Delete custom keychain",
 									"ignoreCase": "key"
 								},
@@ -18235,12 +18290,12 @@
 									"ignoreCase": "key"
 								},
 								"deleteCert": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Delete Certificate from Keychain",
 									"ignoreCase": "key"
 								},
 								"deleteCustomKeychain": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Delete Custom Keychain",
 									"ignoreCase": "key"
 								},
@@ -18304,12 +18359,12 @@
 									"ignoreCase": "key"
 								},
 								"deleteCert": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Delete certificate from keychain",
 									"ignoreCase": "key"
 								},
 								"deleteCustomKeychain": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Delete custom keychain",
 									"ignoreCase": "key"
 								},
@@ -18594,7 +18649,7 @@
 									"ignoreCase": "key"
 								},
 								"failOnStdErr": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on STDERR",
 									"ignoreCase": "key"
 								}
@@ -18693,12 +18748,12 @@
 									"ignoreCase": "key"
 								},
 								"parallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Parallel copy",
 									"ignoreCase": "key"
 								},
 								"parallelCount": {
-									"type": "integer",
+									"$ref": "#/definitions/integerTemplateMacroRuntimeExpression",
 									"description": "Parallel count",
 									"ignoreCase": "key"
 								}
@@ -18770,12 +18825,12 @@
 									"ignoreCase": "key"
 								},
 								"includeFullReport": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include full analysis report in the build summary (SQ 5.3+)",
 									"ignoreCase": "key"
 								},
 								"breakBuild": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail the build on quality gate failure (SQ 5.3+)",
 									"ignoreCase": "key"
 								}
@@ -18889,7 +18944,7 @@
 									]
 								},
 								"useConfigurationFile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use Configuration files",
 									"ignoreCase": "key"
 								},
@@ -18951,7 +19006,7 @@
 									"ignoreCase": "key"
 								},
 								"forceUpdate": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Force update secret",
 									"ignoreCase": "key"
 								},
@@ -18961,12 +19016,12 @@
 									"ignoreCase": "key"
 								},
 								"forceUpdateConfigMap": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Force update configmap",
 									"ignoreCase": "key"
 								},
 								"useConfigMapFile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use file",
 									"ignoreCase": "key"
 								},
@@ -18994,7 +19049,7 @@
 									"ignoreCase": "key"
 								},
 								"checkLatest": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Check for latest version",
 									"ignoreCase": "key"
 								},
@@ -19076,7 +19131,7 @@
 									"ignoreCase": "key"
 								},
 								"useClusterAdmin": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use cluster admin credentials",
 									"ignoreCase": "key"
 								},
@@ -19104,7 +19159,7 @@
 									]
 								},
 								"useConfigurationFile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use configuration",
 									"ignoreCase": "key"
 								},
@@ -19173,7 +19228,7 @@
 									"ignoreCase": "key"
 								},
 								"forceUpdate": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Force update secret",
 									"ignoreCase": "key"
 								},
@@ -19183,12 +19238,12 @@
 									"ignoreCase": "key"
 								},
 								"forceUpdateConfigMap": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Force update configmap",
 									"ignoreCase": "key"
 								},
 								"useConfigMapFile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use file",
 									"ignoreCase": "key"
 								},
@@ -19216,7 +19271,7 @@
 									"ignoreCase": "key"
 								},
 								"checkLatest": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Check for latest version",
 									"ignoreCase": "key"
 								},
@@ -19454,12 +19509,12 @@
 									"ignoreCase": "key"
 								},
 								"passwordEncrypted": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Password Encrypted",
 									"ignoreCase": "key"
 								},
 								"upgrade": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Upgrade",
 									"ignoreCase": "key"
 								},
@@ -19512,7 +19567,7 @@
 									]
 								},
 								"apksign": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Sign the APK",
 									"ignoreCase": "key"
 								},
@@ -19562,7 +19617,7 @@
 									]
 								},
 								"zipalign": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Zipalign",
 									"ignoreCase": "key"
 								},
@@ -19602,7 +19657,7 @@
 									"ignoreCase": "key"
 								},
 								"jarsign": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Sign the APK",
 									"ignoreCase": "key"
 								},
@@ -19632,7 +19687,7 @@
 									"ignoreCase": "key"
 								},
 								"zipalign": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Zipalign",
 									"ignoreCase": "key"
 								},
@@ -19675,7 +19730,7 @@
 									]
 								},
 								"jarsign": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Sign the APK",
 									"ignoreCase": "key"
 								},
@@ -19717,7 +19772,7 @@
 									"ignoreCase": "key"
 								},
 								"zipalign": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Zipalign",
 									"ignoreCase": "key"
 								},
@@ -19815,7 +19870,7 @@
 									]
 								},
 								"specificBuildWithTriggering": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "When appropriate, download artifacts from the triggering build.",
 									"ignoreCase": "key"
 								},
@@ -19913,7 +19968,7 @@
 									]
 								},
 								"specificBuildWithTriggering": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "When appropriate, download artifacts from the triggering build.",
 									"ignoreCase": "key",
 									"aliases": [
@@ -19955,12 +20010,12 @@
 									"ignoreCase": "key"
 								},
 								"allowPartiallySucceededBuilds": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Download artifacts from partially succeeded builds.",
 									"ignoreCase": "key"
 								},
 								"allowFailedBuilds": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Download artifacts from failed builds.",
 									"ignoreCase": "key"
 								},
@@ -20017,7 +20072,7 @@
 									"ignoreCase": "key"
 								},
 								"addToPath": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Add to PATH",
 									"ignoreCase": "key"
 								},
@@ -20128,12 +20183,12 @@
 									"ignoreCase": "key"
 								},
 								"codeCoverageEnabled": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Code Coverage Enabled",
 									"ignoreCase": "key"
 								},
 								"runInParallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run In Parallel",
 									"ignoreCase": "key"
 								},
@@ -20185,7 +20240,7 @@
 									"ignoreCase": "key"
 								},
 								"publishRunAttachments": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Upload Test Attachments",
 									"ignoreCase": "key"
 								}
@@ -20261,7 +20316,7 @@
 									"ignoreCase": "key"
 								},
 								"runOnlyImpactedTests": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run only impacted tests",
 									"ignoreCase": "key"
 								},
@@ -20271,7 +20326,7 @@
 									"ignoreCase": "key"
 								},
 								"uiTests": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Test mix contains UI tests",
 									"ignoreCase": "key"
 								},
@@ -20315,17 +20370,17 @@
 									"ignoreCase": "key"
 								},
 								"runInParallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run tests in parallel on multi-core machines",
 									"ignoreCase": "key"
 								},
 								"runTestsInIsolation": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run tests in isolation",
 									"ignoreCase": "key"
 								},
 								"codeCoverageEnabled": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Code coverage enabled",
 									"ignoreCase": "key"
 								},
@@ -20370,7 +20425,7 @@
 									"ignoreCase": "key"
 								},
 								"dontDistribute": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Replicate tests instead of distributing when multiple agents are used in the job",
 									"ignoreCase": "key"
 								},
@@ -20390,12 +20445,12 @@
 									"ignoreCase": "key"
 								},
 								"publishRunAttachments": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Upload test attachments",
 									"ignoreCase": "key"
 								},
 								"failOnMinTestsNotRun": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail the task if a minimum number of tests are not run.",
 									"ignoreCase": "key"
 								},
@@ -20405,7 +20460,7 @@
 									"ignoreCase": "key"
 								},
 								"diagnosticsEnabled": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Collect advanced diagnostics in case of catastrophic failures",
 									"ignoreCase": "key"
 								},
@@ -20419,7 +20474,7 @@
 									]
 								},
 								"rerunFailedTests": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Rerun failed tests",
 									"ignoreCase": "key"
 								},
@@ -20487,7 +20542,7 @@
 									"ignoreCase": "key"
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish to Azure Pipelines",
 									"ignoreCase": "key"
 								},
@@ -20538,7 +20593,7 @@
 									]
 								},
 								"codeCoverageFailIfEmpty": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail when code coverage results are missing",
 									"ignoreCase": "key",
 									"aliases": [
@@ -20645,7 +20700,7 @@
 									]
 								},
 								"testCertificate": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Test Certificate",
 									"ignoreCase": "key"
 								},
@@ -20660,12 +20715,12 @@
 									"ignoreCase": "key"
 								},
 								"runAsProcess": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run UI tests",
 									"ignoreCase": "key"
 								},
 								"isDataCollectionOnly": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable data collection only",
 									"ignoreCase": "key"
 								},
@@ -20683,7 +20738,7 @@
 									"ignoreCase": "key"
 								},
 								"updateTestAgent": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Update test agent",
 									"ignoreCase": "key"
 								}
@@ -20742,7 +20797,7 @@
 									]
 								},
 								"testCertificate": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Test Certificate",
 									"ignoreCase": "key"
 								},
@@ -20770,7 +20825,7 @@
 									"ignoreCase": "key"
 								},
 								"runAsProcess": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Interactive Process",
 									"ignoreCase": "key"
 								},
@@ -20780,12 +20835,12 @@
 									"ignoreCase": "key"
 								},
 								"updateTestAgent": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Update Test Agent",
 									"ignoreCase": "key"
 								},
 								"isDataCollectionOnly": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable Data Collection Only",
 									"ignoreCase": "key"
 								}
@@ -20817,7 +20872,7 @@
 							"description": "Conda environment inputs",
 							"properties": {
 								"createCustomEnvironment": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create a custom environment",
 									"ignoreCase": "key"
 								},
@@ -20832,7 +20887,7 @@
 									"ignoreCase": "key"
 								},
 								"updateConda": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Update to the latest Conda",
 									"ignoreCase": "key"
 								},
@@ -20847,7 +20902,7 @@
 									"ignoreCase": "key"
 								},
 								"cleanEnvironment": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean the environment",
 									"ignoreCase": "key"
 								}
@@ -20886,7 +20941,7 @@
 									"ignoreCase": "key"
 								},
 								"updateConda": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Update to the latest Conda",
 									"ignoreCase": "key"
 								},
@@ -20896,7 +20951,7 @@
 									"ignoreCase": "key"
 								},
 								"cleanEnvironment": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean the environment",
 									"ignoreCase": "key"
 								}
@@ -20936,7 +20991,7 @@
 									"ignoreCase": "key"
 								},
 								"modifyEnvironment": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Modify Environment",
 									"ignoreCase": "key"
 								},
@@ -20946,7 +21001,7 @@
 									"ignoreCase": "key"
 								},
 								"failOnStandardError": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								}
@@ -21008,17 +21063,17 @@
 									"ignoreCase": "key"
 								},
 								"clean": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean",
 									"ignoreCase": "key"
 								},
 								"maximumCpuCount": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Build in Parallel",
 									"ignoreCase": "key"
 								},
 								"restoreNugetPackages": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Restore NuGet Packages",
 									"ignoreCase": "key"
 								},
@@ -21031,12 +21086,12 @@
 									]
 								},
 								"logProjectEvents": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Record Project Details",
 									"ignoreCase": "key"
 								},
 								"createLogFile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create Log File",
 									"ignoreCase": "key"
 								},
@@ -21128,7 +21183,7 @@
 									]
 								},
 								"useGlobalJson": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use global json",
 									"ignoreCase": "key"
 								},
@@ -21143,7 +21198,7 @@
 									"ignoreCase": "key"
 								},
 								"includePreviewVersions": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include Preview Versions",
 									"ignoreCase": "key"
 								},
@@ -21153,7 +21208,7 @@
 									"ignoreCase": "key"
 								},
 								"performMultiLevelLookup": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Perform Multi Level Lookup",
 									"ignoreCase": "key"
 								}
@@ -21228,7 +21283,7 @@
 									"ignoreCase": "key"
 								},
 								"includePreviewVersions": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Include Preview Versions",
 									"ignoreCase": "key"
 								},
@@ -21238,7 +21293,7 @@
 									"ignoreCase": "key"
 								},
 								"performMultiLevelLookup": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Perform Multi Level Lookup",
 									"ignoreCase": "key"
 								}
@@ -21298,7 +21353,7 @@
 									"ignoreCase": "key"
 								},
 								"SpecifySlotOrASE": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Specify Slot or App Service Environment",
 									"ignoreCase": "key",
 									"aliases": [
@@ -21316,7 +21371,7 @@
 									"ignoreCase": "key"
 								},
 								"SwapWithProduction": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Swap with Production",
 									"ignoreCase": "key"
 								},
@@ -21326,7 +21381,7 @@
 									"ignoreCase": "key"
 								},
 								"PreserveVnet": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Preserve Vnet",
 									"ignoreCase": "key"
 								},
@@ -21419,7 +21474,7 @@
 									"ignoreCase": "key"
 								},
 								"enableXmlTransform": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "XML transformation",
 									"ignoreCase": "key"
 								},
@@ -21516,7 +21571,7 @@
 									"ignoreCase": "key"
 								},
 								"cleanDestinationFolder": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean destination folder before extracting",
 									"ignoreCase": "key"
 								}
@@ -21572,12 +21627,12 @@
 									"ignoreCase": "key"
 								},
 								"createAppPackage": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create app package",
 									"ignoreCase": "key"
 								},
 								"clean": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean",
 									"ignoreCase": "key"
 								},
@@ -21839,7 +21894,7 @@
 									"ignoreCase": "key"
 								},
 								"extract": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Extract package contents",
 									"ignoreCase": "key"
 								},
@@ -21971,7 +22026,7 @@
 									"ignoreCase": "key"
 								},
 								"addSpnToEnvironment": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Access service principal details in override parameters",
 									"ignoreCase": "key"
 								}
@@ -22103,12 +22158,12 @@
 									]
 								},
 								"enableDeploymentPrerequisitesForCreate": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable Deployment Prerequisites",
 									"ignoreCase": "key"
 								},
 								"enableDeploymentPrerequisitesForSelect": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable Deployment Prerequisites",
 									"ignoreCase": "key"
 								},
@@ -22246,12 +22301,12 @@
 									"ignoreCase": "key"
 								},
 								"copyAzureVMTags": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Copy Azure VM tags to agents",
 									"ignoreCase": "key"
 								},
 								"runAgentServiceAsUser": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Run agent service as a user",
 									"ignoreCase": "key"
 								},
@@ -22281,7 +22336,7 @@
 									"ignoreCase": "key"
 								},
 								"addSpnToEnvironment": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Access service principal details in override parameters",
 									"ignoreCase": "key"
 								}
@@ -22485,7 +22540,7 @@
 									"ignoreCase": "key"
 								},
 								"includeRootFolder": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Prefix root folder name to archive paths",
 									"ignoreCase": "key"
 								},
@@ -22515,7 +22570,7 @@
 									"ignoreCase": "key"
 								},
 								"replaceExistingArchive": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Replace existing archive",
 									"ignoreCase": "key"
 								}
@@ -22547,7 +22602,7 @@
 									"ignoreCase": "key"
 								},
 								"includeRootFolder": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Prepend root folder name to archive paths",
 									"ignoreCase": "key"
 								},
@@ -22589,17 +22644,17 @@
 									"ignoreCase": "key"
 								},
 								"replaceExistingArchive": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Replace existing archive",
 									"ignoreCase": "key"
 								},
 								"verbose": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Force verbose output",
 									"ignoreCase": "key"
 								},
 								"quiet": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Force quiet output",
 									"ignoreCase": "key"
 								}
@@ -22686,17 +22741,17 @@
 									"ignoreCase": "key"
 								},
 								"CleanTargetFolder": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean Target Folder",
 									"ignoreCase": "key"
 								},
 								"OverWrite": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Overwrite",
 									"ignoreCase": "key"
 								},
 								"flattenFolders": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Flatten Folders",
 									"ignoreCase": "key"
 								}
@@ -22741,22 +22796,22 @@
 									"ignoreCase": "key"
 								},
 								"CleanTargetFolder": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Clean Target Folder",
 									"ignoreCase": "key"
 								},
 								"OverWrite": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Overwrite",
 									"ignoreCase": "key"
 								},
 								"flattenFolders": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Flatten Folders",
 									"ignoreCase": "key"
 								},
 								"preserveTimestamp": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Preserve Target Timestamp",
 									"ignoreCase": "key"
 								}
@@ -22855,7 +22910,7 @@
 									"ignoreCase": "key"
 								},
 								"DeleteFirewallRule": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Delete Rule After Task Ends",
 									"ignoreCase": "key"
 								}
@@ -22903,7 +22958,7 @@
 									"ignoreCase": "key"
 								},
 								"verbose": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Verbose logging",
 									"ignoreCase": "key"
 								},
@@ -22944,7 +22999,7 @@
 									"ignoreCase": "key"
 								},
 								"publishPackageMetadata": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish pipeline metadata",
 									"ignoreCase": "key"
 								},
@@ -23018,7 +23073,7 @@
 									"ignoreCase": "key"
 								},
 								"checkLatest": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Check for Latest Version",
 									"ignoreCase": "key"
 								}
@@ -23050,7 +23105,7 @@
 									"ignoreCase": "key"
 								},
 								"checkLatest": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Check for Latest Version",
 									"ignoreCase": "key"
 								}
@@ -23100,7 +23155,7 @@
 									]
 								},
 								"TestCertificate": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Test Certificate",
 									"ignoreCase": "key"
 								},
@@ -23154,7 +23209,7 @@
 									"ignoreCase": "key"
 								},
 								"DeployInParallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Deploy in Parallel",
 									"ignoreCase": "key"
 								},
@@ -23283,7 +23338,7 @@
 									"ignoreCase": "key"
 								},
 								"signPayload": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Sign the Message",
 									"ignoreCase": "key"
 								},
@@ -23298,7 +23353,7 @@
 									"ignoreCase": "key"
 								},
 								"waitForCompletion": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Wait for task completion",
 									"ignoreCase": "key"
 								}
@@ -23341,7 +23396,7 @@
 									"ignoreCase": "key"
 								},
 								"waitForCompletion": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Wait for task completion",
 									"ignoreCase": "key"
 								}
@@ -23595,7 +23650,7 @@
 									]
 								},
 								"specificBuildWithTriggering": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "When appropriate, download artifacts from the triggering build.",
 									"ignoreCase": "key"
 								},
@@ -23609,7 +23664,7 @@
 									]
 								},
 								"allowPartiallySucceededBuilds": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Download artifacts even from partially succeeded builds.",
 									"ignoreCase": "key"
 								},
@@ -23687,7 +23742,7 @@
 									]
 								},
 								"forceRepoUpdate": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Force repo update",
 									"ignoreCase": "key"
 								},
@@ -23737,7 +23792,7 @@
 									"ignoreCase": "key"
 								},
 								"deployToSlotOrASE": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Deploy to Slot or App Service Environment",
 									"ignoreCase": "key"
 								},
@@ -23869,7 +23924,7 @@
 									"ignoreCase": "key"
 								},
 								"failOnStandardError": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								}
@@ -23930,12 +23985,12 @@
 									]
 								},
 								"addSpnToEnvironment": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Access service principal details in script",
 									"ignoreCase": "key"
 								},
 								"useGlobalConfig": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use global Azure CLI configuration",
 									"ignoreCase": "key"
 								},
@@ -23948,7 +24003,7 @@
 									]
 								},
 								"failOnStandardError": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								}
@@ -24031,12 +24086,12 @@
 									]
 								},
 								"addSpnToEnvironment": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Access service principal details in script",
 									"ignoreCase": "key"
 								},
 								"useGlobalConfig": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Use global Azure CLI configuration",
 									"ignoreCase": "key"
 								},
@@ -24049,12 +24104,12 @@
 									]
 								},
 								"failOnStandardError": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								},
 								"powerShellIgnoreLASTEXITCODE": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Ignore $LASTEXITCODE",
 									"ignoreCase": "key"
 								}
@@ -24163,17 +24218,17 @@
 									]
 								},
 								"isDraft": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Draft release",
 									"ignoreCase": "key"
 								},
 								"isPreRelease": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Pre-release",
 									"ignoreCase": "key"
 								},
 								"addChangeLog": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Add changelog",
 									"ignoreCase": "key"
 								},
@@ -24308,17 +24363,17 @@
 									]
 								},
 								"isDraft": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Draft release",
 									"ignoreCase": "key"
 								},
 								"isPreRelease": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Pre-release",
 									"ignoreCase": "key"
 								},
 								"addChangeLog": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Add changelog",
 									"ignoreCase": "key"
 								},
@@ -24418,7 +24473,7 @@
 									"ignoreCase": "key"
 								},
 								"redirectStderr": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Redirect Standard Error to Standard Out",
 									"ignoreCase": "key"
 								}
@@ -24473,7 +24528,7 @@
 									"ignoreCase": "key"
 								},
 								"redirectStderr": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Redirect Standard Error to Standard Out",
 									"ignoreCase": "key"
 								}
@@ -24678,7 +24733,7 @@
 									]
 								},
 								"publishPackageMetadata": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish pipeline metadata",
 									"ignoreCase": "key"
 								},
@@ -24842,7 +24897,7 @@
 									"ignoreCase": "key"
 								},
 								"waitForStability": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Wait for stability",
 									"ignoreCase": "key"
 								},
@@ -24889,7 +24944,7 @@
 									"ignoreCase": "key"
 								},
 								"disableAutoCwd": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Specify Working Directory",
 									"ignoreCase": "key"
 								},
@@ -24899,7 +24954,7 @@
 									"ignoreCase": "key"
 								},
 								"failOnStandardError": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								}
@@ -24957,17 +25012,17 @@
 									"ignoreCase": "key"
 								},
 								"failOnStderr": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Fail on Standard Error",
 									"ignoreCase": "key"
 								},
 								"noProfile": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Don't load the profile startup/initialization files",
 									"ignoreCase": "key"
 								},
 								"noRc": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Don't read the `~/.bashrc' initialization file",
 									"ignoreCase": "key"
 								}
@@ -25020,12 +25075,12 @@
 									"ignoreCase": "key"
 								},
 								"Parallel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Parallel copy",
 									"ignoreCase": "key"
 								},
 								"ParallelCount": {
-									"type": "integer",
+									"$ref": "#/definitions/integerTemplateMacroRuntimeExpression",
 									"description": "Parallel count",
 									"ignoreCase": "key"
 								},
@@ -25161,7 +25216,7 @@
 									"ignoreCase": "key"
 								},
 								"skipArchivingCustomScripts": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Skip Archiving custom scripts",
 									"ignoreCase": "key"
 								}
@@ -25219,7 +25274,7 @@
 									"ignoreCase": "key"
 								},
 								"doNotDelete": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Set DoNotDelete flag",
 									"ignoreCase": "key"
 								},
@@ -25267,7 +25322,7 @@
 									]
 								},
 								"EnableAdvancedStorageOptions": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable ARM storage support",
 									"ignoreCase": "key"
 								},
@@ -25320,27 +25375,27 @@
 									"ignoreCase": "key"
 								},
 								"AppendDateTimeToLabel": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Append current date and time",
 									"ignoreCase": "key"
 								},
 								"AllowUpgrade": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Allow upgrade",
 									"ignoreCase": "key"
 								},
 								"SimultaneousUpgrade": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Simultaneous upgrade",
 									"ignoreCase": "key"
 								},
 								"ForceUpgrade": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Force upgrade",
 									"ignoreCase": "key"
 								},
 								"VerifyRoleInstanceStatus": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Verify role instance status",
 									"ignoreCase": "key"
 								},
@@ -25404,7 +25459,7 @@
 									"ignoreCase": "key"
 								},
 								"RemoveSourceFolder": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Remove SourceFolder",
 									"ignoreCase": "key"
 								}
@@ -25459,7 +25514,7 @@
 									"ignoreCase": "key"
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish to Azure Pipelines/TFS",
 									"ignoreCase": "key"
 								},
@@ -25474,7 +25529,7 @@
 									"ignoreCase": "key"
 								},
 								"enableCodeCoverage": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable code Coverage",
 									"ignoreCase": "key"
 								},
@@ -25547,7 +25602,7 @@
 									"ignoreCase": "key"
 								},
 								"publishJUnitResults": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Publish to Azure Pipelines/TFS",
 									"ignoreCase": "key"
 								},
@@ -25562,7 +25617,7 @@
 									"ignoreCase": "key"
 								},
 								"enableCodeCoverage": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable code Coverage",
 									"ignoreCase": "key"
 								},
@@ -25680,7 +25735,7 @@
 									"ignoreCase": "key"
 								},
 								"numOfSelfProvisionedAgents": {
-									"type": "integer",
+									"$ref": "#/definitions/integerTemplateMacroRuntimeExpression",
 									"description": "No. of agents to use",
 									"ignoreCase": "key"
 								},
@@ -25718,7 +25773,7 @@
 							"description": "IIS web app manage inputs",
 							"properties": {
 								"EnableIIS": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Enable IIS",
 									"ignoreCase": "key"
 								},
@@ -25785,7 +25840,7 @@
 									"ignoreCase": "key"
 								},
 								"AddBinding": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Add binding",
 									"ignoreCase": "key"
 								},
@@ -25808,7 +25863,7 @@
 									"ignoreCase": "key"
 								},
 								"ServerNameIndication": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Server Name Indication required",
 									"ignoreCase": "key"
 								},
@@ -25838,12 +25893,12 @@
 									"ignoreCase": "key"
 								},
 								"CreateOrUpdateAppPoolForWebsite": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create or update app pool",
 									"ignoreCase": "key"
 								},
 								"ConfigureAuthenticationForWebsite": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Configure authentication",
 									"ignoreCase": "key"
 								},
@@ -25891,17 +25946,17 @@
 									"ignoreCase": "key"
 								},
 								"AnonymousAuthenticationForWebsite": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Anonymous authentication",
 									"ignoreCase": "key"
 								},
 								"BasicAuthenticationForWebsite": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Basic authentication",
 									"ignoreCase": "key"
 								},
 								"WindowsAuthenticationForWebsite": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Windows authentication",
 									"ignoreCase": "key"
 								},
@@ -25972,7 +26027,7 @@
 									"ignoreCase": "key"
 								},
 								"CreateOrUpdateAppPoolForApplication": {
-									"type": "boolean",
+									"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 									"description": "Create or update app pool",
 									"ignoreCase": "key"
 								},
