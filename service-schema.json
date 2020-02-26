@@ -1879,11 +1879,11 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this job to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						},
 						"cancelTimeoutInMinutes": {
 							"description": "Time to wait for the job to cancel before forcibly terminating it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						},
 						"variables": {
 							"description": "Job-specific variables",
@@ -1941,11 +1941,11 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this job to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						},
 						"cancelTimeoutInMinutes": {
 							"description": "Time to wait for the job to cancel before forcibly terminating it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						},
 						"variables": {
 							"description": "Deployment-specific variables",
@@ -2552,7 +2552,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait before cancelling the phase",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						},
 						"workspace": {
 							"$ref": "#/definitions/phaseTargetWorkspace"
@@ -2583,7 +2583,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait before cancelling the job",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false
@@ -2707,7 +2707,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -2770,7 +2770,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -2833,7 +2833,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -2889,7 +2889,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -2965,7 +2965,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3018,7 +3018,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3078,7 +3078,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3127,7 +3127,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3174,7 +3174,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3240,7 +3240,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3293,7 +3293,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3341,7 +3341,7 @@
 						},
 						"timeoutInMinutes": {
 							"description": "Time to wait for this task to complete before the server kills it",
-							"$ref": "#/definitions/nonEmptyString"
+							"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 						}
 					},
 					"additionalProperties": false,
@@ -3426,7 +3426,7 @@
 				},
 				"timeoutInMinutes": {
 					"description": "Time to wait for this task to complete before the server kills it",
-					"$ref": "#/definitions/nonEmptyString"
+					"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 				}
 			},
 			"additionalProperties": false
@@ -5183,7 +5183,7 @@
 					"description": "Continue running the parent job even on failure?"
 				},
 				"enabled": {
-					"type": "string",
+					"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression",
 					"description": "Run this task when the job runs?"
 				},
 				"timeoutInMinutes": {
