@@ -3688,7 +3688,7 @@
 													},
 													"continueOnError": {
 														"description": "Continue running even on failure?",
-														"$ref": "#/definitions/boolean"
+														"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 													},
 													"displayName": {
 														"description": "Human-readable name for the task",
@@ -3700,7 +3700,7 @@
 													},
 													"enabled": {
 														"description": "Run this task when the job runs?",
-														"$ref": "#/definitions/boolean"
+														"$ref": "#/definitions/booleanTemplateMacroRuntimeExpression"
 													},
 													"env": {
 														"description": "Variables to map into the process's environment",
@@ -3712,7 +3712,7 @@
 													},
 													"timeoutInMinutes": {
 														"description": "Time to wait for this task to complete before the server kills it",
-														"$ref": "#/definitions/nonEmptyString"
+														"$ref": "#/definitions/integerTemplateMacroRuntimeExpression"
 													}
 												}
 											}
