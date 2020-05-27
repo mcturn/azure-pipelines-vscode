@@ -1372,34 +1372,30 @@
 									]
 								},
 								{
-									"description": "Windows Server 2012 R2 with Visual Studio 2015",
+									"description": "Ubuntu 18.04",
 									"enum": [
-										"vs2015-win2012r2"
-									]
-								},
-								{
-									"description": "Windows Server Core 1803 (for running Windows containers)",
-									"enum": [
-										"win1803"
+										"ubuntu-latest",
+										"ubuntu-18.04"
 									]
 								},
 								{
 									"description": "Ubuntu 16.04",
 									"enum": [
-										"ubuntu-latest",
 										"ubuntu-16.04"
 									]
 								},
 								{
 									"description": "macOS X Mojave 10.14",
 									"enum": [
-										"macOS-latest",
 										"macOS-10.14"
 									]
 								},
 								{
-									"description": "macOS X High Sierra 10.13",
-									"enum": ["macOS-10.13"]
+									"description": "macOS X Catalina 10.15",
+									"enum": [
+										"macOS-latest",
+										"macOS-10.15"
+									]
 								}
 							]
 						}
