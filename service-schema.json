@@ -67,7 +67,7 @@
             },
             "parameters": {
               "description": "Pipeline template parameters",
-              "$ref": "#/definitions/pipelineTemplateParameters"
+              "$ref": "#/definitions/templateParameters"
             },
             "pr": {
               "description": "Pull request triggers",
@@ -111,7 +111,7 @@
             },
             "parameters": {
               "description": "Pipeline template parameters",
-              "$ref": "#/definitions/pipelineTemplateParameters"
+              "$ref": "#/definitions/templateParameters"
             },
             "pr": {
               "description": "Pull request triggers",
@@ -155,7 +155,7 @@
             },
             "parameters": {
               "description": "Pipeline template parameters",
-              "$ref": "#/definitions/pipelineTemplateParameters"
+              "$ref": "#/definitions/templateParameters"
             },
             "pr": {
               "description": "Pull request triggers",
@@ -197,7 +197,7 @@
             },
             "parameters": {
               "description": "Pipeline template parameters",
-              "$ref": "#/definitions/pipelineTemplateParameters"
+              "$ref": "#/definitions/templateParameters"
             },
             "pr": {
               "description": "Pull request triggers",
@@ -259,7 +259,7 @@
             },
             "parameters": {
               "description": "Pipeline template parameters",
-              "$ref": "#/definitions/pipelineTemplateParameters"
+              "$ref": "#/definitions/templateParameters"
             },
             "pr": {
               "description": "Pull request triggers",
@@ -309,7 +309,7 @@
             },
             "parameters": {
               "description": "Pipeline template parameters",
-              "$ref": "#/definitions/pipelineTemplateParameters"
+              "$ref": "#/definitions/templateParameters"
             },
             "pr": {
               "description": "Pull request triggers",
@@ -360,7 +360,7 @@
             },
             "parameters": {
               "description": "Pipeline template parameters",
-              "$ref": "#/definitions/pipelineTemplateParameters"
+              "$ref": "#/definitions/templateParameters"
             },
             "pr": {
               "description": "Pull request triggers",
